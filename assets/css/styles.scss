@@ -1,0 +1,12 @@
+---
+---
+// @import "main";
+
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
+
+body {
+    background-color: black;
+}
