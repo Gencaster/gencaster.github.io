@@ -31,8 +31,8 @@ github_username:  gencaster
 favicon: /assets/images/logo.png
 
 # Build settings
-# theme: minima
-theme: jekyll-theme-yat
+theme: minima
+# theme: jekyll-theme-yat
 plugins:
   - jekyll-feed
 
