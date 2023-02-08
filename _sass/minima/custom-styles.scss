@@ -5,6 +5,17 @@
     background: #ADFF00;
 }
 
+.header-wrapper {
+    padding-right: $spacing-unit * 1;
+    padding-left: $spacing-unit * 1;
+    height: 54px;
+}
+
+.header-wrapper-spacer {
+    display: block;
+    height: 54px;
+}
+
 .landing-intro {
     padding-top: calc(3 * $spacing-unit);
     display: flex;
