@@ -18,3 +18,9 @@ There is a CI step which builds the website and serves it via [GitHub Pages](htt
   ```shell
   bundle exec jekyll serve --livereload
   ```
+
+
+## Customization
+
+### Styling
+Is done in `initialize.scss`, `_base.scss` and `_layout.scss`.

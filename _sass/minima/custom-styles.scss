@@ -1,0 +1,66 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+::selection {
+    background: #ADFF00;
+}
+
+.landing-intro {
+    padding-top: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 64px;
+        /* or 128% */
+
+        text-align: center;
+        letter-spacing: -0.02em;
+
+        width: 100%;
+        max-width: 840px;
+    }
+
+    .editor-screenshot {
+        pointer-events: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+}
+
+.chapter {
+    width: 100%;
+    border-bottom: 2px solid;
+    font-size: 36px;
+    margin-bottom: 40px;
+    h3 {
+        line-height: 1;
+        font-size: 36px;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+}
+
+
+.custom-content {
+    width: 100%;
+
+    .sponsors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px 36px;
+
+        .sponsor {
+            width: 250px;
+            height: auto;
+        }
+
+    }
+}
