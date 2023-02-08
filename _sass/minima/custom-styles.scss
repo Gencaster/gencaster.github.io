@@ -17,7 +17,7 @@
 }
 
 .landing-intro {
-    padding-top: calc(3 * $spacing-unit);
+    padding-top: calc(2 * $spacing-unit);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +38,7 @@
     }
 
     .editor-screenshot {
+        aspect-ratio: 1/1;
         pointer-events: none;
         -webkit-user-select: none;
         -khtml-user-select: none;

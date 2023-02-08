@@ -2,8 +2,8 @@
 layout: post
 title:  Next_generation 9.0 @ ZKM
 subtitle: 
-image: assets/posts/2022-06-25-zkm-next_generation.jpg
-date:   2022-11-23 18:08:59 +0100
+image: assets/posts/2022-06-25-zkm-next_generation/landing.jpg
+date:   2022-06-25 18:08:59 +0100
 categories: presentation
 tags: [presentation,demo]
 ---
