@@ -92,17 +92,13 @@
 .post-wrapper {
     box-sizing: border-box;
     // background-color: yellow;
-    padding: 0;
-    margin: 0;
     padding-left: $spacing-unit * 1;
     padding-right: $spacing-unit * 1;
-
+    
     width: 100%;
-    max-width: 850px;
-
-    // .post-meta {
-    //     margin-bottom: -13px;
-    // }
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 
     h1,
     h2 {
