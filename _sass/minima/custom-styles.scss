@@ -6,7 +6,7 @@
 }
 
 .landing-intro {
-    padding-top: 42px;
+    padding-top: calc(3 * $spacing-unit);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,6 +23,7 @@
 
         width: 100%;
         max-width: 840px;
+        margin-bottom: calc(1 * $spacing-unit);
     }
 
     .editor-screenshot {
@@ -34,14 +35,15 @@
         user-select: none;
     }
 
-    margin-bottom: calc(2 * $spacing-unit) ;
+    margin-bottom: calc(2 * $spacing-unit);
 }
 
 .chapter {
     width: 100%;
     border-bottom: 2px solid;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: calc(1 * $spacing-unit);
+
     h3 {
         line-height: 1;
         font-size: 36px;
