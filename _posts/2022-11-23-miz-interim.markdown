@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  Interim presentation at MIZ Babelsberg
-subtitle: Demonstrating the current state of GenCaster
+subtitle: 
+image: assets/posts/2022-11-23-miz-interim.jpg
 date:   2022-11-23 18:08:59 +0100
 categories: presentation
 tags: [presentation,demo]

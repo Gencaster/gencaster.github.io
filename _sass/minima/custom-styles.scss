@@ -33,6 +33,8 @@
         -o-user-select: none;
         user-select: none;
     }
+
+    margin-bottom: calc(2 * $spacing-unit) ;
 }
 
 .chapter {
