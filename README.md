@@ -1,6 +1,6 @@
 # GenCaster website
 
-The source code for our static website for which we use [Jekyll](https://jekyllrb.com/) with [jekyll-theme-yat](https://github.com/jeffreytse/jekyll-theme-yat).
+The source code for our static website for which we use [Jekyll](https://jekyllrb.com/).
 
 There is a CI step which builds the website and serves it via [GitHub Pages](https://pages.github.com/).
 
@@ -18,3 +18,9 @@ There is a CI step which builds the website and serves it via [GitHub Pages](htt
   ```shell
   bundle exec jekyll serve --livereload
   ```
+
+
+## Customization
+
+### Styling
+Is done in `initialize.scss`, `_base.scss` and `_layout.scss`.

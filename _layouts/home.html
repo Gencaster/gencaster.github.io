@@ -1,8 +1,95 @@
 ---
-layout: articles
-heading: 'Your awesome heading'
-subheading: 'Your awesome subheading'
-banner: 'default'
+layout: default
 ---
 
-{{ content }}
+<div class="home">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <div class="landing-intro">
+    <h2>
+      A non-linear audio streaming framework for real-time radiophonic
+      experiences and live music.
+    </h2>
+    <img
+      class="editor-screenshot"
+      src="/assets/img/graphs/graph-f.svg"
+      alt="editor screenshot"
+    />
+  </div>
+
+  <div class="chapter">
+    <h3>News</h3>
+  </div>
+
+  {{ content }} {% if site.paginate %} {% assign posts = paginator.posts %} {%
+  else %} {% assign posts = site.posts %} {% endif %} {%- if posts.size > 0 -%}
+  {%- if page.list_title -%}
+  <h2 class="post-list-heading">{{ page.list_title }}</h2>
+  {%- endif -%}
+  <ul class="post-list">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <li>
+      <span class="post-meta">{{ post.date | date: date_format }}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <h3 class="post-title">{{ post.title | escape }}</h3>
+        <div class="post-image">
+          <img src="{{post.image}}" alt="" />
+        </div>
+
+        {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+      </a>
+      <div class="post-tags">
+        {% for tag in post.tags %}
+        <p class="tag">{{tag}}</p>
+        {% endfor %}
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  {% if site.paginate %}
+  <div class="pager">
+    <ul class="pagination">
+      {%- if paginator.previous_page %}
+      <li>
+        <a
+          href="{{ paginator.previous_page_path | relative_url }}"
+          class="previous-page"
+          >{{ paginator.previous_page }}</a
+        >
+      </li>
+      {%- else %}
+      <li><div class="pager-edge">•</div></li>
+      {%- endif %}
+      <li><div class="current-page">{{ paginator.page }}</div></li>
+      {%- if paginator.next_page %}
+      <li>
+        <a
+          href="{{ paginator.next_page_path | relative_url }}"
+          class="next-page"
+          >{{ paginator.next_page }}</a
+        >
+      </li>
+      {%- else %}
+      <li><div class="pager-edge">•</div></li>
+      {%- endif %}
+    </ul>
+  </div>
+  {%- endif %} {%- endif -%}
+
+  <div class="chapter">
+    <h3>Supported by</h3>
+  </div>
+  <div class="custom-content">
+    <div class="sponsors">
+      <div class="sponsor">
+        <img src="/assets/img/sponsors/miz-logo.svg" alt="miz sponsor logo" />
+      </div>
+    </div>
+  </div>
+
+  <div class="end-spacer"></div>
+</div>

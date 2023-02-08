@@ -1,0 +1,178 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+::selection {
+    background: #ADFF00;
+}
+
+.header-wrapper {
+    padding-right: $spacing-unit * 1;
+    padding-left: $spacing-unit * 1;
+    height: 54px;
+    transform: scale(1);
+
+
+    @include onScreen('phone-only') {
+        padding-right: $spacing-unit * 0.5;
+        padding-left: $spacing-unit * 0.5;
+    }
+}
+
+.header-wrapper-spacer {
+    display: block;
+    height: 54px;
+}
+
+.landing-intro {
+    padding-top: calc(2 * $spacing-unit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include onScreen('phone-only') {
+        padding-top: calc(0.5 * $spacing-unit);
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 64px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        width: 100%;
+        max-width: 840px;
+        margin-bottom: calc(1 * $spacing-unit);
+
+        @include onScreen('phone-only') {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 115%;
+        }
+    }
+
+    .editor-screenshot {
+        aspect-ratio: 1/1;
+        pointer-events: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        @include onScreen('phone-only') {
+            transform: scale(1);
+
+        }
+    }
+
+    margin-bottom: calc(2 * $spacing-unit);
+}
+
+.chapter {
+    width: 100%;
+    border-bottom: 2px solid;
+    font-size: 36px;
+    margin-bottom: calc(1 * $spacing-unit);
+
+    h3 {
+        line-height: 1;
+        font-size: 36px;
+        margin: 0;
+        margin-bottom: 12px;
+
+        @include onScreen('phone-only') {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 115%;
+            margin-bottom: 8px;
+        }
+    }
+}
+
+
+.custom-content {
+    width: 100%;
+
+    .sponsors {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px 36px;
+
+        .sponsor {
+            width: 250px;
+            height: auto;
+
+            @include onScreen('phone-only') {
+                width: 50%;
+            }
+        }
+
+    }
+}
+
+.end-spacer {
+    height: calc(3 * $spacing-unit);
+}
+
+// ====================================
+// =============== POST ===============
+// ====================================
+
+.post-wrapper {
+    box-sizing: border-box;
+    // background-color: yellow;
+    padding-left: $spacing-unit * 1;
+    padding-right: $spacing-unit * 1;
+
+    @include onScreen('phone-only') {
+        padding-left: $spacing-unit * 0.5;
+        padding-right: $spacing-unit * 0.5;
+    }
+
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1,
+    h2 {
+        font-size: 36px;
+        line-height: 125%;
+        /* identical to box height, or 178% */
+        letter-spacing: -0.02em;
+
+        @include onScreen('phone-only') {
+            font-size: 32px;
+        }
+    }
+
+    h1 {
+        margin-bottom: 0px;
+
+        @include onScreen('phone-only') {
+            margin-bottom: 5px;
+        }
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 135%;
+        letter-spacing: 0em;
+        margin-bottom: $spacing-unit * 1;
+
+        @include onScreen('phone-only') {
+            font-size: 21px;
+        }
+    }
+
+    img,
+    iframe {
+        margin-bottom: $spacing-unit * 1;
+
+        &.border {
+            border: 1px solid black;
+        }
+    }
+}
