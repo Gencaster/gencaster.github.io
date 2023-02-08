@@ -84,3 +84,48 @@
 .end-spacer {
     height: calc(3 * $spacing-unit);
 }
+
+// ====================================
+// =============== POST ===============
+// ====================================
+
+.post-wrapper {
+    box-sizing: border-box;
+    // background-color: yellow;
+    padding: 0;
+    margin: 0;
+    padding-left: $spacing-unit * 1;
+    padding-right: $spacing-unit * 1;
+
+    width: 100%;
+    max-width: 850px;
+
+    // .post-meta {
+    //     margin-bottom: -13px;
+    // }
+
+    h1,
+    h2 {
+        font-size: 36px;
+        line-height: 64px;
+        /* identical to box height, or 178% */
+        letter-spacing: -0.02em;
+    }
+
+    h1 {
+        margin-bottom: -10px;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 135%;
+        letter-spacing: 0em;
+
+        margin-bottom: $spacing-unit * 1;
+    }
+
+    img, iframe {
+        margin-bottom: $spacing-unit * 1;
+
+    }
+}
