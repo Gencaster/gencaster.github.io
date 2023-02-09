@@ -97,7 +97,7 @@
 
 
     .sponsors {
-        display: flex;
+        position: relative;
         flex-wrap: wrap;
         gap: 36px 36px;
         margin-top: -16px;
@@ -109,9 +109,13 @@
             justify-content: center;
             align-items: center;
 
+            a {
+                height: 100%;
+                width: 100%;
+            }
+
             img {
-                // max-width: 100%;
-                // max-height: 100%;
+                display: block;
                 height: 100%;
                 width: 100%;
                 object-fit: contain;
