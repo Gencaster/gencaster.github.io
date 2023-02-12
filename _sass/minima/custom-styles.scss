@@ -5,6 +5,11 @@
     background: #ADFF00;
 }
 
+* {
+    text-decoration-thickness: 0.05em !important;
+    text-underline-offset: 0.1em !important;
+}
+
 .header-wrapper {
     padding-right: $spacing-unit * 1;
     padding-left: $spacing-unit * 1;
@@ -95,7 +100,6 @@
 .custom-content {
     width: 100%;
 
-
     .sponsors {
         position: relative;
         flex-wrap: wrap;
@@ -127,6 +131,13 @@
             }
         }
 
+    }
+
+    &.link-collection {
+        a {
+            color: black;
+            text-decoration: underline;
+        }
     }
 }
 
@@ -192,5 +203,15 @@
         &.border {
             border: 1px solid black;
         }
+    }
+}
+
+.imprint {
+    padding: 10px;
+
+    p {
+        white-space: pre-wrap;
+        font-size: 14px;
+        line-height: 130%;
     }
 }
