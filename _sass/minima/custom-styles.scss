@@ -68,7 +68,6 @@
 
         @include onScreen('phone-only') {
             transform: scale(1);
-
         }
     }
 
@@ -93,6 +92,61 @@
             line-height: 115%;
             margin-bottom: 8px;
         }
+    }
+
+    p {
+        font-size: 21px;
+    }
+
+   
+}
+
+.longtext {
+    width: 100%;
+    column-gap: 40px;
+    column-count: 2;
+    font-size: 21px;
+    margin-bottom: 32px;
+
+    @include onScreen('phone-only') {
+        column-count: 1;
+        font-size: 18px;
+    }
+}
+
+.feature-wrapper {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // gap: 20px;
+}
+
+.feature {
+    width: calc(50% - 20px);
+    display: inline-block;
+    background-color: #F2F2F2;
+    padding: 12px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+
+    @include onScreen('phone-only') {
+        width: 100%;
+    }
+
+    p {
+        font-size: 21px;
+        @include onScreen('phone-only') {
+            font-size: 17px;
+        }
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 28px;
+        margin-bottom: 4px;
     }
 }
 
