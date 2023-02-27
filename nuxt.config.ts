@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt/config'
-
 const metaTitle = 'Gencaster'
 const siteUrl = 'https://gencaster.org/'
 const metaDescription
@@ -44,7 +42,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/scss/variables.scss";',
+          additionalData: '@import "@/assets/scss/variables.scss"; @import "@/assets/scss/mixins.scss";',
         },
       },
     },
