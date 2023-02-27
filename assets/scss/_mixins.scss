@@ -135,3 +135,23 @@
     }
   }
 }
+
+@mixin padding-h($amount) {
+  padding-left: $amount;
+  padding-right: $amount;
+}
+
+@mixin padding-v($amount) {
+  padding-top: $amount;
+  padding-bottom: $amount;
+}
+
+@mixin margin-h($amount) {
+  margin-left: $amount;
+  margin-right: $amount;
+}
+
+@mixin margin-v($amount) {
+  margin-top: $amount;
+  margin-bottom: $amount;
+}

@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p class="typo-test">gencaster v3</p>
-  </div>
+  <main>
+      <Hero></Hero>
+  </main>
 </template>
 
 <style lang="scss" scoped>
