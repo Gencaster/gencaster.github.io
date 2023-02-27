@@ -1,7 +1,16 @@
+<script setup>
+  const { data } = await useAsyncData('home', () => queryContent('/').findOne())
+  console.log(data)
+</script>
+
+
 <template>
     <div class="hero">
         <p>
             A non-linear audio streaming framework for real-time radiophonic experiences and live music.
+        </p>
+        <p>
+            <slot />
         </p>
     </div>
 </template>
