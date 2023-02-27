@@ -2,6 +2,8 @@
 
 // spacing
 $globalPadding: 10px;
+$globalPaddingM: 1.5rem;
+$globalPaddingL: 3.5rem;
 $spacingXS: 0.25rem;
 $spacingS: 0.5rem;
 $spacingM: 1rem;
@@ -13,7 +15,6 @@ $smallFontSizeMobile: 0.8rem;
 $smallFontSize: 0.8rem;
 $baseFontSizeMobile: 16px;
 $baseFontSize: 16px;
-
 
 $mediumFontSizeMobile: 21px;
 $mediumFontSizeMobileProject: 17px;
@@ -31,6 +32,8 @@ $black: #000;
 $white: #fff;
 $bodyBackground: #FAFAFA;
 $selection: #ADFF00;
+$green: $selection;
+$blue: #1400FF;
 
 // menu
 // $menuHeight: 128px;

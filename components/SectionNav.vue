@@ -6,7 +6,7 @@
     <div>
         <ul>
             <li v-for="section in sections">
-                <a href="${section}">{{ section }}</a>
+                <a :href="'#' + section.toLowerCase()">{{ section }}</a>
             </li>
         </ul>
     </div>

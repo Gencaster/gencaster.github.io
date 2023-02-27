@@ -2,7 +2,7 @@
   <main>
       <Hero></Hero>
       <SectionNav></SectionNav>
-      <ColoredBgText></ColoredBgText>
+      <ColoredBgText heading="General" img_src="/img/spiral.svg" img_alt="Bild"></ColoredBgText>
   </main>
 </template>
 

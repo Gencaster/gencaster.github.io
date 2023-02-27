@@ -1,4 +1,15 @@
 /* ============ Layout ============ */
-// .layout-default {
-//   padding: 10px 15px 10px 15px;
-// }
+body {
+    @include padding-h($globalPadding);
+    @include padding-v($globalPadding);
+    
+    @include onScreen('tablet-portrait-up') {
+        @include padding-h($globalPaddingM);
+        @include padding-v($globalPaddingM);
+    }
+    
+    @include onScreen('macbook-up') {
+        @include padding-h($globalPaddingL);
+        @include padding-v($globalPaddingL);
+    }
+}
