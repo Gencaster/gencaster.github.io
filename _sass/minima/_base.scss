@@ -211,6 +211,11 @@ pre {
     padding-right: $spacing-unit * 3;
     padding-left: $spacing-unit * 3;
   }
+
+  @include onScreen('phone-only') {
+    padding-right: $spacing-unit * 0.5;
+    padding-left: $spacing-unit * 0.5;
+}
 }
 
 
