@@ -1,6 +1,8 @@
 <template>
   <main>
       <Hero></Hero>
+      <SectionNav></SectionNav>
+      <ColoredBgText></ColoredBgText>
   </main>
 </template>
 
