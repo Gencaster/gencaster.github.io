@@ -1,16 +1,16 @@
 /* ============ Layout ============ */
 body {
-    @include padding-h($globalPadding);
-    @include padding-v($globalPadding);
+    @include padding-h($bodyPadding_H);
+    @include padding-v($bodyPadding_V);
     
     @include onScreen('tablet-portrait-up') {
-        @include padding-h($globalPaddingM);
-        @include padding-v($globalPaddingM);
+        @include padding-h($bodyPaddingM_H);
+        @include padding-v($bodyPaddingM_V);
     }
     
     @include onScreen('macbook-up') {
-        @include padding-h($globalPaddingL);
-        @include padding-v($globalPaddingL);
+        @include padding-h($bodyPaddingL_H);
+        @include padding-v($bodyPaddingL_V);
     }
 }
 

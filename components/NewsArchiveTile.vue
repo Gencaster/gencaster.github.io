@@ -28,6 +28,10 @@ const props = defineProps({
         @include onScreen('tablet-portrait-up') {
             width: $fiveColumns;
         }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .img-container {

@@ -18,6 +18,7 @@ div {
 }
 
 ul {
+    padding-left: 0;
     width: 100%;
     display: flex;
     flex-flow: row wrap;

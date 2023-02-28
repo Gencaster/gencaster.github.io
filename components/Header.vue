@@ -1,7 +1,7 @@
 <script setup>
 const menu_items = [
     {
-        name: "Home",
+        name: "Contact",
         href: "/",
         external: false
     },
@@ -24,8 +24,8 @@ const menu_items = [
 </script>
 
 <template>
-    <div>
-        <div class="logo-container"></div>
+    <div class="header-container">
+        <div class="logo-container">Gencaster</div>
         <nav>
             <ul>
                 <li v-for="item in menu_items">
@@ -37,11 +37,61 @@ const menu_items = [
 </template>
 
 <style lang="scss" scoped>
+    .header-container {
+        @include fontStyle('largeBodyText');
+            @include padding-h($bodyPadding_H);
+    @include padding-v($bodyPadding_V);
+    
+    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+    @include onScreen('tablet-portrait-up') {
+        @include padding-h($bodyPaddingM_H);
+        @include padding-v($bodyPaddingM_V);
+    }
+
+    @include onScreen('tablet-landscape-up') {
+
+    }
+    
+    @include onScreen('macbook-up') {
+        @include padding-h($bodyPaddingL_H);
+        @include padding-v($bodyPaddingL_V);
+    }
+    }
+
     a {
         text-decoration: none;
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     ul {
         list-style: none;
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include onScreen('tablet-landscape-up') {
+            flex-direction: row;
+        }
+
+        li {
+            @include onScreen('tablet-landscape-up') {
+                @include margin-h(1ch);
+            }
+        }
     }
 </style>
