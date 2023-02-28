@@ -2,12 +2,12 @@
 const menu_items = [
     {
         name: "Contact",
-        href: "/",
+        href: "/contact/",
         external: false
     },
     {
         name: "Github",
-        href: "/",
+        href: "https://github.com/GenCaster/gencaster.github.io",
         external: true
     },
     {
