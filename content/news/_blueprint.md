@@ -1,0 +1,15 @@
+---
+# Create a low-res variant (width < 1000px) for teaser image
+teaser_img:
+    src: /img/murray-laptop1.webp # Put images somwhere in /public/img/
+    alt: A dog on the interwebs.
+---
+
+<!-- Headings -->
+# Heading 1
+## Heading 2
+### Heading 3
+<!-- ... -->
+
+<!-- Add images Like this -->
+![dog_laptop](/img/murray-laptop1.webp)
