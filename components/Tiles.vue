@@ -18,9 +18,10 @@
 
 <style lang="scss" scoped>
     div {
+        @include gap;
+        
         display: flex;
         flex-flow: row wrap;
-        gap: 10px;
         width: 100%;
         margin-bottom: $spacingS;
         

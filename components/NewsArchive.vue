@@ -5,13 +5,15 @@ const { data: news } = await useAsyncData("news", () => {
 </script>
 
 <template>
-    <SectionHeading heading="News"></SectionHeading>
-    <div class="news-archive-container">
-        <NewsArchiveTile v-for="article in news" :article="article"></NewsArchiveTile>
-        <div class="more-link">
-            <a href="/news">More</a>
+    <section>
+        <SectionHeading heading="News"></SectionHeading>
+        <div class="news-archive-container">
+            <NewsArchiveTile v-for="article in news" :article="article"></NewsArchiveTile>
+            <div class="more-link">
+                <a href="/news">More</a>
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>

@@ -156,15 +156,11 @@
   margin-bottom: $amount;
 }
 
-@mixin gap() {
+@mixin gap {
   gap: $spacingS;
         
   @include onScreen('tablet-portrait-up') {
       gap: $spacingM;
-  }
-        
-  @include onScreen('macbook-up') {
-      gap: $spacingL;
   }
 }
 

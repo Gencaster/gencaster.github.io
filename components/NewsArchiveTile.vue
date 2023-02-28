@@ -5,23 +5,24 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="container">
+    <a href="" class="container">
         <div class="img-container">
             <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
         </div>
         <h4>
             {{article.title}}
         </h4>
-    </div>
+    </a>
 </template>
 
 <style lang="scss" scoped>
-    .container {
+    a.container {
         display: flex;
         flex-flow: column nowrap;
         background: $grey;
         gap: 0;
         width: 100%;
+        text-decoration: none;
         cursor: pointer;
 
         @include onScreen('tablet-portrait-up') {
