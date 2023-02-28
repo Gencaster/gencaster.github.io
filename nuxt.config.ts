@@ -9,9 +9,9 @@ const siteImage = {
   type: 'image/png',
 }
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  app: {
+	  app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: metaTitle,
@@ -34,14 +34,18 @@ export default defineNuxtConfig({
     },
   },
 
-  components: [
+    components: [
     {
       path: '~/components', // will get any components nested in let's say /components/test too
       pathPrefix: false,
     },
   ],
 
-  css: ['assets/scss/main.scss'],
+	modules: ["@nuxt/content"],
+	content: {
+	},
+
+	  css: ['assets/scss/main.scss'],
 
   vite: {
     css: {
@@ -52,4 +56,4 @@ export default defineNuxtConfig({
       },
     },
   },
-})
+});

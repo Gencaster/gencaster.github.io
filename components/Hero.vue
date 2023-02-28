@@ -1,13 +1,14 @@
 <script setup>
-  const { data } = await useAsyncData('home', () => queryContent('/').findOne())
-  console.log(data)
+const { data: hero } = await useAsyncData("home", () => {
+    return queryContent("home").where({ title: 'hero' }).findOne();
+});
 </script>
 
 
 <template>
     <div class="hero">
         <p>
-            A non-linear audio streaming framework for real-time radiophonic experiences and live music.
+            {{hero.text}}
         </p>
         <p>
             <slot />
