@@ -1,8 +1,10 @@
 <script setup>
     const props = defineProps({
         heading: String,
-        tiles: Array,
-    })
+        tiles: Array
+    });
+
+
 </script>
 
 <template>
