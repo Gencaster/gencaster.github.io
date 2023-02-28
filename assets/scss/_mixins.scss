@@ -155,3 +155,31 @@
   margin-top: $amount;
   margin-bottom: $amount;
 }
+
+@mixin gap() {
+  gap: $spacingS;
+        
+  @include onScreen('tablet-portrait-up') {
+      gap: $spacingM;
+  }
+        
+  @include onScreen('macbook-up') {
+      gap: $spacingL;
+  }
+}
+
+
+@mixin borderless {
+  @include margin-h(-$globalPadding);
+  @include padding-h($globalPadding);
+  
+  @include onScreen('tablet-portrait-up') {
+      @include margin-h(-$globalPaddingM);
+      @include padding-h($globalPaddingM);
+  }
+  
+  @include onScreen('macbook-up') {
+      @include margin-h(-$globalPaddingL);
+      @include padding-h($globalPaddingL);
+  }
+}

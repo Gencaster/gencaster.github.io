@@ -8,10 +8,12 @@
 </script>
 
 <template>
-    <SectionHeading :heading=heading></SectionHeading>
-    <div>
-        <Tile v-for="tile in tiles" :tile="tile"></Tile>
-    </div>
+    <section>
+        <SectionHeading :heading=heading></SectionHeading>
+        <div>
+            <Tile v-for="tile in tiles" :tile="tile"></Tile>
+        </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>

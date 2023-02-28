@@ -1,19 +1,16 @@
 <script setup>
-const { data: hero } = await useAsyncData("home", () => {
-    return queryContent("home").where({ title: 'hero' }).findOne();
-});
+    const props = defineProps({
+        text: String,
+    })
 </script>
 
 
 <template>
-    <div class="hero">
+    <section class="hero">
         <p>
-            {{hero.text}}
+            {{text}}
         </p>
-        <p>
-            <slot />
-        </p>
-    </div>
+    </section>
 </template>
 
 <style lang='scss' scoped>
@@ -26,6 +23,7 @@ const { data: hero } = await useAsyncData("home", () => {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0; // overwrite general layout
     
     @include onScreen('tablet-landscape-up') {
         @include padding-h(15%);

@@ -13,3 +13,15 @@ body {
         @include padding-v($globalPaddingL);
     }
 }
+
+section {
+    margin-bottom: 2rem;
+
+    @include onScreen('tablet-portrait-up') {
+        margin-bottom: 2.5rem;
+    }
+
+    @include onScreen('macbook-up') {
+        margin-bottom: 3.5rem;
+    }
+}

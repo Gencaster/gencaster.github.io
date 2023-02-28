@@ -25,29 +25,17 @@
 
 <style lang="scss" scoped>
     section {
-        @include margin-h(-$globalPadding);
-        @include padding-h($globalPadding);
+        @include gap;
+        @include borderless;
         
         background-color: $green;
         color: $black;
         display: flex; 
         flex-flow: column nowrap;
         align-items: center;
-        gap: $spacingS;
         
-        @include onScreen('tablet-portrait-up') {
-            @include margin-h(-$globalPaddingM);
-            @include padding-h($globalPaddingM);
-            
-            gap: $spacingM;
-        }
-        
-        @include onScreen('macbook-up') {
-            @include margin-h(-$globalPaddingL);
-            @include padding-h($globalPaddingL);
-            
+        @include onScreen('macbook-up') {          
             flex-direction: row;
-            gap: $spacingL;
         }
     }
     

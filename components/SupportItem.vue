@@ -1,25 +1,24 @@
 <script setup>
-    const props = defineProps({
-        text: String,
-        img_src: String,
-        img_alt: String,
-    })
+const props = defineProps({
+    tile: Object,
+})
 </script>
 
 <template>
-<section>
-    <div class="img-container">
-        <img :src="img_src" :alt="img_alt">
+    <div class="support-tile">
+        <div class="img-container">
+            <img :src="tile.img_src" :alt="tile.img_alt">
+        </div>
+        <div class="text-container">
+            {{ tile.text }}
+        </div>
     </div>
-    <div class="text-container">
-        {{ text }}
-    </div>
-</section>
 </template>
 
 <style lang="scss" scoped>
-section {
+.support-tile {
     @include padding-v(1em);
+    @include borderless;
 
     display: flex;
     flex-flow: column nowrap;
@@ -34,8 +33,8 @@ section {
         flex-direction: row;
         align-items: center;
         gap: $spacingM;
-
     }
+           
 }
 
 .img-container {

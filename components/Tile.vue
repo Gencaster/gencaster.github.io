@@ -5,19 +5,20 @@
 </script>
 
 <template>
-    <section>
+    <div class="tile">
         <h4>{{ tile.heading }}</h4>
         <div class="text-container">{{ tile.text }}</div>
-    </section>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-    section {
+    .tile {
         @include padding-h(1.2em);
         @include padding-v(1.5em);
         
         width: 100%;
         background-color: $grey;
+        margin-bottom: 0;
 
         @include onScreen('tablet-landscape-up') {
             width: 49%;
