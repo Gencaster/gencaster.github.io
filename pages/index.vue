@@ -1,6 +1,6 @@
 <script setup>
 const { data: hero } = await useAsyncData("home", () => {
-  return queryContent("home").where({ title: 'hero' }).findOne();
+  return queryContent("home").where({ section: 'hero' }).findOne();
 });
 
 const { data: features } = await useAsyncData("features", () => {
@@ -16,11 +16,11 @@ const { data: support } = await useAsyncData("support", () => {
 
 <template>
   <main>
-    <NewsArchive></NewsArchive>
     <Hero :text="hero.text"></Hero>
     <SectionNav></SectionNav>
     <ColoredBgText heading="General" img_src="/img/spiral.svg" img_alt="Bild"></ColoredBgText>
     <Tiles heading="Features" :tiles="features"></Tiles>
+    <NewsArchive></NewsArchive>
     <SupportContainer heading="Support" :tiles="support"></SupportContainer>
   </main>
 </template>

@@ -6,14 +6,16 @@ const { data: news } = await useAsyncData("news", () => {
 
 <template>
     <SectionHeading heading="News"></SectionHeading>
-    <div>
+    <div class="news-archive-container">
         <NewsArchiveTile v-for="article in news" :article="article"></NewsArchiveTile>
-        <a href="/news">More</a>
+        <div class="more-link">
+            <a href="/news">More</a>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-    div {
+    .news-archive-container {
         @include gap;
 
         display: flex;
@@ -22,6 +24,29 @@ const { data: news } = await useAsyncData("news", () => {
 
         @include onScreen('tablet-portrait-up') {
             flex-direction: row;
+        }
+    }
+
+    .more-link {
+        @include fontStyle('largeBodyText');
+        
+        background: $grey;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        @include onScreen('tablet-portrait-up') {
+            width: $twoColumns;
+        }
+        
+        a {
+            @include padding-v(1.5em);
+            @include padding-h(5ch);
+            
+            @include onScreen('tablet-portrait-up') {
+                @include padding-h(2ch);
+            }
         }
     }
 </style>

@@ -22,14 +22,29 @@ const props = defineProps({
         background: $grey;
         gap: 0;
         width: 100%;
+        cursor: pointer;
 
         @include onScreen('tablet-portrait-up') {
-            width: 40%;
+            width: $fiveColumns;
+        }
+    }
+
+    .img-container {
+        padding-top: 69%;
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
     h4 {
         @include padding-h(2ch);
-        @include padding-v(1em);
+        @include padding-v(0.5em);
     }
 </style>
