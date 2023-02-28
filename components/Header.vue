@@ -25,7 +25,11 @@ const menu_items = [
 
 <template>
     <div class="header-container">
-        <div class="logo-container">Gencaster</div>
+        <div class="logo-container">
+            <a href="/">
+                Gencaster
+            </a>
+        </div>
         <nav>
             <ul>
                 <li v-for="item in menu_items">
@@ -67,7 +71,13 @@ const menu_items = [
     }
     }
 
-    a {
+    .logo-container {
+        a {
+            text-decoration: none;
+        }
+    }
+
+    nav a {
         text-decoration: none;
 
         &::after {
