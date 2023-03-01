@@ -6,8 +6,10 @@
 
 <template>
     <div class="tile">
-        <h4>{{ tile.heading }}</h4>
-        <img v-if="tile.img" :src="tile.img.src" :alt="tile.img.alt">
+        <h4 v-if="tile.heading"> {{ tile.heading }}</h4>
+        <div v-if="tile.img" class="img-container">
+            <img :src="tile.img.src" :alt="tile.img.alt">
+        </div>
         <ContentRenderer :value="tile" tag="div">
             <ContentRendererMarkdown :value="tile" class="text-container"/>
         </ContentRenderer>
@@ -26,9 +28,23 @@
         @include onScreen('tablet-landscape-up') {
             width: 49%;
         }
-
     }
-    
+
+    .img-container {
+        padding-top: 40%;
+        width: 40%;
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     h4 {
         @include fontStyle('largeBodyText');
 
