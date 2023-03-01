@@ -21,6 +21,12 @@ const menu_items = [
         external: false
     },
 ]
+
+let isOpen = false;
+function toggleOpen() {
+    console.log(isOpen)
+    isOpen = !isOpen;
+}
 </script>
 
 
@@ -39,7 +45,7 @@ const menu_items = [
                     -->
                 <input type="checkbox" />
 
-                <button class="hamburger">
+                <button @click="toggleOpen" class="hamburger" :class="{ open: isOpen }">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
@@ -133,8 +139,7 @@ input, .hamburger {
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
-
-        input {
+        .no-js input {
             display: block;
             width: 40px;
             height: 32px;
@@ -169,15 +174,18 @@ input, .hamburger {
             width: 30px;
         }
 
-        input:checked~.hamburger .line:nth-child(1) {
+        input:checked~.hamburger .line:nth-child(1),
+        .hamburger.open .line:nth-child(1) {
             transform: translateY(7px) rotate(45deg);
         }
 
-        input:checked~.hamburger .line:nth-child(2) {
+        input:checked~.hamburger .line:nth-child(2),
+        .hamburger.open .line:nth-child(2) {
             opacity: 0;
         }
 
-        input:checked~.hamburger .line:nth-child(3) {
+        input:checked~.hamburger .line:nth-child(3),
+        .hamburger.open .line:nth-child(3) {
             transform: translateY(-7px) rotate(-45deg);
         }
     }
