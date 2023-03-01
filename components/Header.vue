@@ -27,9 +27,10 @@ const menu_items = [
 ]
 
 let isOpen = false;
-function toggleOpen() {
-    console.log(isOpen)
-    isOpen = !isOpen;
+function toggleOpen(ev) {
+    // somehow the :class binding doesn't work ¯\_(ツ)_/¯
+    // isOpen = !isOpen;
+    ev.target.classList.toggle('open');
 }
 </script>
 
@@ -50,11 +51,13 @@ function toggleOpen() {
                     -->
                 <input type="checkbox" />
 
-                <button @click="toggleOpen" class="hamburger" :class="{ open: isOpen }">
-                    <span class="line"></span>
+                <button @click="toggleOpen" id="hamburger" class="hamburger" :class="{ open: isOpen }">
+                    <span class="line" :class="{ open: isOpen }"></span>
                     <span class="line"></span>
                     <span class="line"></span>
                 </button>
+
+                <h1 v-if="isOpen">TEST v-if binding</h1>
 
                 <ul id="menu">
                     <li v-for="item in menu_items">
@@ -167,7 +170,7 @@ input, .hamburger {
             opacity: 0;
             /* hide this */
             z-index: 11;
-            /* and place it over the hamburger */
+            /* and place it over the hamburger, as a no-js fallback */
 
             -webkit-touch-callout: none;
         }
@@ -205,10 +208,6 @@ input, .hamburger {
         }
     }
 
-    /*
- * Make this absolute positioned
- * at the top right of the screen
- */
     #menu {
         @include padding-h($bodyPadding_H);
         @include padding-v(3.5rem);
@@ -249,10 +248,8 @@ input, .hamburger {
         }
     }
 
-    /*
- * And let's slide it in from the left
- */
-    #menuToggle input:checked~ul {
+    #menuToggle input:checked~ul, 
+    .hamburger.open~#menu {
         transform: none;
     }
 }
