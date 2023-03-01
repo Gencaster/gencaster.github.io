@@ -34,21 +34,16 @@ const menu_items = [
         <nav role="navigation">
             <div id="menuToggle">
                 <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
                 <input type="checkbox" />
 
-                <!--
-            Some spans to act as a hamburger.
-    
-            They are acting like a real hamburger,
-            not that McDonalds stuff.
-            -->
-                <span></span>
-                <span></span>
-                <span></span>
-
+                <button class="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
 
                 <ul id="menu">
                     <li v-for="item in menu_items">
@@ -123,31 +118,19 @@ ul {
     }
 }
 
-input {
+input, .hamburger {
     display: none;
 }
 
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
 @include onScreen('phone-and-tablet-landscape-only') {
     $burgerTransition : 200ms ease-in-out;
 
     #menuToggle {
         display: block;
         position: relative;
-        top: 4px;
+        top: 0;
         left: 0;
-
         z-index: 1;
-
         -webkit-user-select: none;
         user-select: none;
 
@@ -163,63 +146,39 @@ input {
 
             opacity: 0;
             /* hide this */
-            z-index: 2;
+            z-index: 11;
             /* and place it over the hamburger */
 
             -webkit-touch-callout: none;
         }
 
-        /*
- * Just a quick hamburger
- */
-        span {
+        .hamburger {
             display: block;
-            width: 33px;
-            height: 3px;
-            margin-bottom: 5px;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
             position: relative;
-
-            background: $black;
-            border-radius: 3px;
-
-            z-index: 1;
-
-            transform-origin: 3px 0px;
-
-            transition: transform $burgerTransition,
-                opacity $burgerTransition;
+            z-index: 10;
         }
 
-        span:first-child {
-            transform-origin: 0% 0%;
+        .hamburger .line {
+            background-color: $black;
+            display: block;
+            margin: 5px 0;
+            height: 2px;
+            width: 30px;
         }
 
-        span:nth-last-child(2) {
-            transform-origin: 0% 100%;
+        input:checked~.hamburger .line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
         }
 
-        /* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-        input:checked~span {
-            opacity: 1;
-            transform: rotate(45deg) translate(-2px, -1px);
-        }
-
-        /*
- * But let's hide the middle one.
- */
-        input:checked~span:nth-last-child(3) {
+        input:checked~.hamburger .line:nth-child(2) {
             opacity: 0;
-            transform: rotate(0deg) scale(0.2, 0.2);
         }
 
-        /*
- * Ohyeah and the last one should go the other direction
- */
-        input:checked~span:nth-last-child(2) {
-            transform: rotate(-45deg) translate(0, -1px);
+        input:checked~.hamburger .line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
     }
 
@@ -228,34 +187,37 @@ input {
  * at the top right of the screen
  */
     #menu {
-        @include padding-h($bodyPaddingM_H);
+        @include padding-h($bodyPadding_H);
+        @include padding-v(3.5rem);
 
-        padding-top: 3.5rem;
         position: absolute;
         top: -$bodyPadding_V;
         right: -$bodyPadding_H;
-        right: 0;
-        width: 50vw;
+        width: 33vw;
         height: 100vh;
-        box-sizing: content-box;
         align-items: end;
-        
+        justify-content: center;
+        box-sizing: border-box;
+
         background: $grey;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         /* to stop flickering of text in safari */
-        
+
         transform-origin: 0% 0%;
-        transform: translate(100%, 0);
-        
+        transform: translate(105%, 0);
+
         transition: transform $burgerTransition;
-        
+
+        @include onScreen('iphone-phone-only') {
+            width: 50vw;
+        }
+
         @include onScreen('tablet-portrait-up') {
             @include padding-h($bodyPaddingM_H);
 
             top: -$bodyPaddingM_V;
             right: -$bodyPaddingM_H;
-            width: 33vw;
         }
 
         li {
