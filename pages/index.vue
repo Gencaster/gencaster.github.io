@@ -12,7 +12,7 @@ const { data: features } = await useAsyncData("features", () => {
 });
 
 const { data: support } = await useAsyncData("support", () => {
-  return queryContent("home", "support").where({ section: 'support' }).find();
+  return queryContent("general", "support").where({ section: 'support' }).find();
 });
 
 const sections = ["General", "Features", "Editor", "News", "Support"]
@@ -25,7 +25,7 @@ const sections = ["General", "Features", "Editor", "News", "Support"]
     <Hero :text="hero.text"></Hero>
     <SectionNav :sections="sections"></SectionNav>
     <ColoredBgText :heading="general.heading" :content="general.description" :img="general.img" :color="general.color"/>
-    <Tiles heading="Features" :tiles="features"></Tiles>
+    <FeatureTiles heading="Features" :tiles="features"></FeatureTiles>
     <NewsArchive></NewsArchive>
     <SupportContainer heading="Support" :tiles="support"></SupportContainer>
   </main>

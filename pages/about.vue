@@ -8,6 +8,14 @@ const { data: about } = await useAsyncData("about", () => {
 const { data: techstack } = await useAsyncData("techstack", () => {
     return queryContent("about").where({ section: 'techstack' }).findOne();
 });
+
+const { data: team } = await useAsyncData("team", () => {
+    return queryContent("about", "team").where({section: 'team'}).find();
+});
+
+const { data: support } = await useAsyncData("support", () => {
+    return queryContent("general", "support").where({ section: 'support' }).find();
+});
 </script>
 
 <template>
@@ -15,6 +23,8 @@ const { data: techstack } = await useAsyncData("techstack", () => {
         <SectionNav :sections="sections"></SectionNav>
         <TwoColumnText :heading="about.heading" :text="about.description" />
         <ColoredBgText :heading="techstack.heading" :content="techstack.description" :color="techstack.color"/>
+        <TeamTiles heading="Team" :tiles="team"></TeamTiles>
+        <SupportContainer heading="Support" :tiles="support"></SupportContainer>
     </main>
 </template>
 

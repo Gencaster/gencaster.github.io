@@ -24,7 +24,7 @@ div {
     margin-bottom: $spacingS;
 
     @include onScreen('tablet-portrait-up') {
-        width: $tenColumns
+        width: $tenColumns;
         margin-bottom: $spacingM;
     }
 

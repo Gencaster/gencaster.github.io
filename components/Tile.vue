@@ -7,7 +7,8 @@
 <template>
     <div class="tile">
         <h4>{{ tile.heading }}</h4>
-        <div class="text-container">{{ tile.text }}</div>
+        <img v-if="tile.img" :src="tile.img.src" :alt="tile.img.alt">
+        <div class="text-container">{{ tile.description }}</div>
     </div>
 </template>
 
