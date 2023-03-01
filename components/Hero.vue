@@ -18,7 +18,7 @@
     @include padding-h(15px);
     @include padding-v(20px);
 
-    height: 90vh;
+    height: 87vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -26,8 +26,8 @@
     margin-bottom: 0; // overwrite general layout
     
     @include onScreen('tablet-landscape-up') {
-        @include padding-h(15%);
-        @include padding-v(10%);
+        @include padding-h(12%);
+        @include padding-v(9%);
     }
     
     p {

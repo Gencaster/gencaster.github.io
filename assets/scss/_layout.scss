@@ -1,4 +1,8 @@
 /* ============ Layout ============ */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @include padding-h($bodyPadding_H);
     @include padding-v($bodyPadding_V);

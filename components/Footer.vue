@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <p>2022 – 2023</p>
         <a href="/imprint">Imprint</a>
+        <p>2022 – 2023</p>
     </footer>
 </template>
 
@@ -9,7 +9,7 @@
     footer {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 5rem;
@@ -21,7 +21,7 @@
         }
 
         p {
-            margin-bottom: 0;
+            margin-bottom: 0.25rem;
         }
     }
 </style>

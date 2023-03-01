@@ -1,4 +1,8 @@
 <script setup>
+const props = defineProps({
+    logo_src: String,
+})
+
 const menu_items = [
     {
         name: "Contact",
@@ -33,6 +37,7 @@ function toggleOpen() {
 <template>
     <div class="header-container">
         <div class="logo-container">
+            <img :src="logo_src" alt="Gencaster Logo">
             <a href="/">
                 Gencaster
             </a>
@@ -91,6 +96,16 @@ function toggleOpen() {
 }
 
 .logo-container {
+    display: flex;
+    gap: 0.5ch;
+    align-items: center;
+    margin-top: -5px;
+
+    img {
+        height: 36px;
+        width: 36px;
+    }
+
     a {
         text-decoration: none;
     }
