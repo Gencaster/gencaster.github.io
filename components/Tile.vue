@@ -8,7 +8,9 @@
     <div class="tile">
         <h4>{{ tile.heading }}</h4>
         <img v-if="tile.img" :src="tile.img.src" :alt="tile.img.alt">
-        <div class="text-container">{{ tile.description }}</div>
+        <ContentRenderer :value="tile" tag="div">
+            <ContentRendererMarkdown :value="tile" class="text-container"/>
+        </ContentRenderer>
     </div>
 </template>
 

@@ -1,14 +1,16 @@
 <script setup>
 const props = defineProps({
     heading: String,
-    text: String,
+    text: Object,
 })
 </script>
 
 <template>
     <section>
         <SectionHeading :heading="heading"></SectionHeading>
-        <div>{{ text }}</div>
+        <ContentRenderer :value="text" tag="div">
+            <ContentRendererMarkdown :value="text"/>
+        </ContentRenderer>
     </section>
 </template>
 

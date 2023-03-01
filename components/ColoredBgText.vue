@@ -1,7 +1,7 @@
 <script setup>
     const props = defineProps({
         heading: String,
-        content: String,
+        content: Object,
         color: String,
         img: Object
     })
@@ -11,9 +11,9 @@
     <section :class="color">
         <div class="text-container">
             <SectionHeading :heading="heading"></SectionHeading>
-            <p>
-               {{ content }}
-            </p>
+            <ContentRenderer :value="content" tag="div">
+                <ContentRendererMarkdown :value="content" />
+            </ContentRenderer>
         </div>
         <div v-if="img" class="img-container">
             <img :src="img.src" :alt="img.alt">
@@ -59,14 +59,16 @@
         
         @include onScreen('macbook-up') {
             @include padding-v($spacingL);
+
+            width: 50%;
         }
     }
 
     .img-container {
         @include padding-h(10%);
-
+        
         @include onScreen('tablet-portrait-up') {
-            width: 80%;
+            width: $tenColumns;
         }
     }
     
