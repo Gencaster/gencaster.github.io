@@ -2,7 +2,7 @@
 const menu_items = [
     {
         name: "Contact",
-        href: "/contact/",
+        href: "mailto:contact@gencaster.org",
         external: false
     },
     {

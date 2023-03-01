@@ -26,7 +26,7 @@
         margin-bottom: $spacingS;
         
         @include onScreen('tablet-portrait-up') {
-            width: 83.33334%; // 10/12
+            width: $tenColumns;
             margin-bottom: $spacingM;
         }
 
