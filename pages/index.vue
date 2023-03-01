@@ -26,7 +26,7 @@ const sections = ["General", "Features", "Editor", "News", "Support"]
     <SectionNav :sections="sections"></SectionNav>
     <ColoredBgText :heading="general.heading" :content="general" :img="general.img" :color="general.color"/>
     <FeatureTiles heading="Features" :tiles="features"></FeatureTiles>
-    <NewsArchive></NewsArchive>
+    <NewsArchivePreview />
     <SupportContainer heading="Support" :tiles="support"></SupportContainer>
   </main>
 </template>

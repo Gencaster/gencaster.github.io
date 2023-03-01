@@ -1,6 +1,6 @@
 <script setup>
 const { data: news } = await useAsyncData("news", () => {
-    return queryContent("news").find();
+    return queryContent("news").limit(2).find();
 });
 </script>
 
@@ -9,6 +9,9 @@ const { data: news } = await useAsyncData("news", () => {
         <SectionHeading heading="News"></SectionHeading>
         <div class="news-archive-container">
             <NewsArchiveTile v-for="article in news" :article="article"></NewsArchiveTile>
+            <div class="more-link">
+                <a href="/news">More</a>
+            </div>
         </div>
     </section>
 </template>
@@ -18,7 +21,7 @@ const { data: news } = await useAsyncData("news", () => {
         @include gap;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 5fr 5fr 2fr;
         justify-content: space-between;
 
         @include onScreen('tablet-portrait-up') {
@@ -34,10 +37,6 @@ const { data: news } = await useAsyncData("news", () => {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-        @include onScreen('tablet-portrait-up') {
-            width: $twoColumns;
-        }
         
         a {
             @include padding-v(1.5em);

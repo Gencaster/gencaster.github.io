@@ -1,11 +1,12 @@
 <script setup>
 const props = defineProps({
     article: Object,
+    width: String,
 })
 </script>
 
 <template>
-    <a href="" class="container">
+    <a href="" class="container" :class="width">
         <div class="img-container">
             <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
         </div>
@@ -25,13 +26,10 @@ const props = defineProps({
         text-decoration: none;
         cursor: pointer;
 
-        @include onScreen('tablet-portrait-up') {
-            width: $fiveColumns;
-        }
-
         &:hover {
             text-decoration: underline;
         }
+
     }
 
     .img-container {

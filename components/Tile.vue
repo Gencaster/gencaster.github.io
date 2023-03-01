@@ -34,6 +34,7 @@
         padding-top: 40%;
         width: 40%;
         position: relative;
+        margin-bottom: 0.7rem;
 
         & img {
             position: absolute;

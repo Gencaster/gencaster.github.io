@@ -1,3 +1,12 @@
+<script setup>
+
+</script>
+
 <template>
-  <h1>News</h1>
+  <main>
+    <NewsArchive />
+  </main>
 </template>
+
+<style lang="scss" scoped>
+</style>
