@@ -11,13 +11,14 @@ const { data: support } = await useAsyncData("support", () => {
   return queryContent("home", "support").where({ section: 'support' }).find();
 });
 
+const sections = ["General", "Features", "Editor", "News", "Support"]
 
 </script>
 
 <template>
   <main>
     <Hero :text="hero.text"></Hero>
-    <SectionNav></SectionNav>
+    <SectionNav :sections="sections"></SectionNav>
     <ColoredBgText heading="General" img_src="/img/spiral.svg" img_alt="Bild"></ColoredBgText>
     <Tiles heading="Features" :tiles="features"></Tiles>
     <NewsArchive></NewsArchive>
@@ -26,4 +27,7 @@ const { data: support } = await useAsyncData("support", () => {
 </template>
 
 <style lang="scss" scoped>
+main {
+  padding-top: 0; // bc hero
+}
 </style>

@@ -25,3 +25,15 @@ section {
         margin-bottom: 3.5rem;
     }
 }
+
+main {
+    padding-top: 2rem;
+    
+    @include onScreen('tablet-portrait-up') {
+        padding-top: 3rem;
+    }
+    
+    @include onScreen('macbook-up') {
+        padding-top: 4rem;
+    }
+}

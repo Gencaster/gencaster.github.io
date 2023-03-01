@@ -166,16 +166,16 @@
 
 
 @mixin borderless {
-  @include margin-h(-$globalPadding);
-  @include padding-h($globalPadding);
+  @include margin-h(-$bodyPadding_H);
+  @include padding-h($bodyPadding_H);
   
   @include onScreen('tablet-portrait-up') {
-      @include margin-h(-$globalPaddingM);
-      @include padding-h($globalPaddingM);
+      @include margin-h(-$bodyPaddingM_H);
+      @include padding-h($bodyPaddingM_H);
   }
   
   @include onScreen('macbook-up') {
-      @include margin-h(-$globalPaddingL);
-      @include padding-h($globalPaddingL);
+      @include margin-h(-$bodyPaddingL_H);
+      @include padding-h($bodyPaddingL_H);
   }
 }

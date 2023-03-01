@@ -1,5 +1,7 @@
 <script setup>
-    const sections = ["General", "Features", "Editor", "News", "Support"]
+    const props = defineProps({
+        sections: Array
+    })
 </script>
 
 <template>

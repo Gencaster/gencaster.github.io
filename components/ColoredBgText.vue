@@ -27,6 +27,7 @@
     section {
         @include gap;
         @include borderless;
+        @include padding-v(2.5rem);
         
         background-color: $green;
         color: $black;
@@ -34,7 +35,9 @@
         flex-flow: column nowrap;
         align-items: center;
         
-        @include onScreen('macbook-up') {          
+        @include onScreen('macbook-up') {    
+            @include padding-v(0);
+            
             flex-direction: row;
         }
     }
@@ -46,8 +49,6 @@
         
         @include onScreen('tablet-portrait-up') {
             @include padding-v($spacingM);
-            
-            width: 80%;
         }
         
         @include onScreen('macbook-up') {
@@ -57,6 +58,10 @@
 
     .img-container {
         @include padding-h(10%);
+
+        @include onScreen('tablet-portrait-up') {
+            width: 80%;
+        }
     }
     
 </style>
