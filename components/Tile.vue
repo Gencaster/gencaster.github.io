@@ -6,10 +6,11 @@
 
 <template>
     <div class="tile">
-        <h4 v-if="tile.heading"> {{ tile.heading }}</h4>
         <div v-if="tile.img" class="img-container">
             <img :src="tile.img.src" :alt="tile.img.alt">
         </div>
+        <h4 v-if="tile.heading">{{ tile.heading }}</h4>
+        <p v-if="tile.role" class="role">{{ tile.role }}</p>
         <ContentRenderer :value="tile" tag="div">
             <ContentRendererMarkdown :value="tile" class="text-container"/>
         </ContentRenderer>
@@ -18,23 +19,30 @@
 
 <style lang="scss" scoped>
     .tile {
-        @include padding-h(1.2em);
-        @include padding-v(1.5em);
-        
         width: 100%;
-        background-color: $grey;
+        display: flex;
+        flex-flow: column nowrap;
         margin-bottom: 0;
+        gap: 0;
+        justify-content: flex-start;
 
         @include onScreen('tablet-landscape-up') {
-            width: 49%;
+        }
+
+        .role {
+            @include margin-v(0);
+            @include fontStyle('body');
+
+            color: $darkGrey;
+            margin-bottom: 0.7rem;
         }
     }
 
     .img-container {
-        padding-top: 40%;
-        width: 40%;
+        padding-top: 69%;
+        width: 100%;
         position: relative;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.4rem;
 
         & img {
             position: absolute;
@@ -47,9 +55,8 @@
     }
 
     h4 {
-        @include fontStyle('largeBodyText');
+        @include fontStyle('smallHeadline');
 
         color: $blue;
-        margin-bottom: 0.5em;
     }
 </style>

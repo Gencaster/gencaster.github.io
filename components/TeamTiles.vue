@@ -18,17 +18,18 @@ const props = defineProps({
 div {
     @include gap;
 
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     width: 100%;
     margin-bottom: $spacingS;
-
+    
     @include onScreen('tablet-portrait-up') {
-        width: $tenColumns;
+        grid-template-columns: repeat(2, 1fr);
         margin-bottom: $spacingM;
     }
-
-    @include onScreen('macbook-up') {
+    
+    @include onScreen('tablet-landscape-up') {
+        grid-template-columns: repeat(3, 1fr);
         margin-bottom: $spacingL;
     }
 
