@@ -4,7 +4,7 @@ subtitle:
 teaser_img:
     src: /img/news/zkm-next-generation/landing.jpg  # Put images somewhere in /public/img/
     alt: Next_generation 9.0 @ ZKM
-date:   2022-06-25 18:08:59 +0100
+date: '2022-06-25'
 categories: presentation
 tags: [presentation,demo]
 ---
