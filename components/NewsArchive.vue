@@ -18,11 +18,11 @@ const { data: news } = await useAsyncData("news", () => {
         @include gap;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: space-between;
+        grid-template-columns: repeat(1, 1fr);
 
         @include onScreen('tablet-portrait-up') {
-            flex-direction: row;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-between;
         }
     }
 

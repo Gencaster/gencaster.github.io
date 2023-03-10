@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <a href="" class="container" :class="width">
+    <a :href="article.slug" class="container" :class="width">
         <div class="img-container">
             <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
         </div>

@@ -4,6 +4,7 @@
 
 <template>
   <main>
+    <p>{{ $route.params.slug }}</p>
     <NewsArchive />
   </main>
 </template>

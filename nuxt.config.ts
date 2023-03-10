@@ -42,11 +42,7 @@ export default defineNuxtConfig({
   ],
 
 	modules: ["@nuxt/content"],
-	content: {
-	},
-
-	  css: ['assets/scss/main.scss'],
-
+  css: ['assets/scss/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
