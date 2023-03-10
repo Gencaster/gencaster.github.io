@@ -15,5 +15,14 @@ h2 {
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 0.5em;
+    scroll-margin-top: $bodyPadding_H;
+    
+    @include onScreen('tablet-portrait-up') {
+        scroll-margin-top: $bodyPaddingM_H;
+    }
+    
+    @include onScreen('macbook-up') {
+        scroll-margin-top: $bodyPaddingL_H;
+    }
 }
 </style>
