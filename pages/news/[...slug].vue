@@ -19,16 +19,44 @@ const { path } = useRoute()
 console.log(path)
 
 const { data: article } = await useAsyncData(`content-${path}`, () => {
-    return queryContent().where({ _path: path }).only(['title']).findOne()
+    return queryContent().where({ _path: path }).findOne()
 })
 </script>
 
 <template>
     <main>
-        <!-- <h1>{{ article.title }}</h1> -->
-        content
+        <div class="content-container">
+            <ContentDoc />
+        </div>
     </main>
 </template>
 
+<style lang="scss" scoped>
+    .content-container {
+        width: 100%;
+
+        @include onScreen('tablet-landscape-up') {
+            @include margin-h(auto);
+
+            width: $eightColumns;
+        }
+
+        p {
+            color: red !important;
+        }
+
+        & img {
+            width: 40%;
+
+            &.border {
+                border: 1px solid black;
+            }
+        }
+    }
+
+    img {
+        width: 25%;
+    }
+</style>
 
 

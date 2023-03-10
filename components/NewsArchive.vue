@@ -1,6 +1,6 @@
 <script setup>
 const { data: news } = await useAsyncData("news", () => {
-    return queryContent("news").find();
+    return queryContent("news").sort({ date: 1 }).find();
 });
 </script>
 
@@ -21,8 +21,11 @@ const { data: news } = await useAsyncData("news", () => {
         grid-template-columns: repeat(1, 1fr);
 
         @include onScreen('tablet-portrait-up') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include onScreen('tablet-landscape-up') {
             grid-template-columns: repeat(3, 1fr);
-            justify-content: space-between;
         }
     }
 
