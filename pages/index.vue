@@ -11,32 +11,29 @@ const { data: features } = await useAsyncData("features", () => {
   return queryContent("home", "features").where({ section: 'features' }).find();
 });
 
+const { data: editor_text } = await useAsyncData("editor_text", () => {
+  return queryContent("home", "editor").where({title: 'Editor'}).findOne();
+});
+
+const { data: editor_tabs } = await useAsyncData("editor_tabs", () => {
+  return queryContent("home", "editor", "tabs").where({section: 'editor'}).find();
+});
+
 const { data: support } = await useAsyncData("support", () => {
   return queryContent("general", "support").where({ section: 'support' }).find();
 });
 
 const sections = ["General", "Features", "Editor", "News", "Support"]
 
-
 </script>
 
 <template>
   <main>
-
-    <!-- <div>
-      <h1>TABS</h1>  
-      <Tabs>
-        <Tab title="Tab 1">Hello From Tab 1</Tab>
-        <Tab title="Tab 2">Hello From Tab 2</Tab>
-        <Tab title="Tab 3">Hello From Tab 3</Tab>
-        <Tab title="Tab 4">Hello From Tab 4</Tab>
-      </Tabs>
-    </div> -->
-
     <Hero :text="hero.text"></Hero>
     <SectionNav :sections="sections"></SectionNav>
     <ColoredBgText :heading="general.heading" :content="general" :img="general.img" :color="general.color"/>
     <FeatureAccordion heading="Features" :items="features"></FeatureAccordion>
+    <EditorTabs :text="editor_text" :items="editor_tabs"></EditorTabs>
     <NewsArchivePreview />
     <SupportContainer heading="Support" :tiles="support"></SupportContainer>
   </main>

@@ -6949,6 +6949,11 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
+vue3-tabs-component@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue3-tabs-component/-/vue3-tabs-component-1.2.0.tgz#f4a31c5d391c4986d30d3049451a16c6f3e5396f"
+  integrity sha512-Njx8S8rhMD1DphZKNRoEHT3J/LMhmMd4tWEK4Fdc1Af5AG4Al3yPjy4MWFa2gxXhO7QStVUSGJUEzlc6qd2RTQ==
+
 vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"

@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
     <section>
-        <SectionHeading :heading="heading"></SectionHeading>
+        <SectionHeading v-if="heading" :heading="heading"></SectionHeading>
         <ContentRenderer :value="text" tag="div">
             <ContentRendererMarkdown :value="text"/>
         </ContentRenderer>
