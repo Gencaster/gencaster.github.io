@@ -1,22 +1,22 @@
-name: Build and deploy Jekyll site to GitHub Pages
-
+name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
-
+      - v3
 jobs:
-  github-pages:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2    # Choose any one of the Jekyll Actions
-        with:                                # Some relative inputs of your action
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: 'gh-pages'
+          ref: main
+      - name: Install dependencies
+        run: npm ci
+      - name: Build and deploy
+        run: npm run deploy
+        env:
+          NODE_ENV: production
+          BASE_URL: https://gencaster.github.io/
+      - name: Deployed successfully
+        run: echo "Deployed successfully"
