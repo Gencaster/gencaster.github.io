@@ -34,13 +34,13 @@ section {
 }
 
 main {
-    padding-top: 2rem;
+    padding-top: 4rem;
     
     @include onScreen('tablet-portrait-up') {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
     
     @include onScreen('macbook-up') {
-        padding-top: 4rem;
+        padding-top: 6rem;
     }
 }

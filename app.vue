@@ -1,5 +1,5 @@
 <template>
-    <Header logo_src="/android-chrome-192x192.png"/>
+    <Header logo_src="/logo.svg"/>
     <NuxtPage/>
     <Footer/>
 </template>

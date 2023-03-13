@@ -37,12 +37,14 @@ function toggleOpen(ev) {
 
 <template>
     <div class="header-container">
-        <div class="logo-container">
-            <img :src="logo_src" alt="Gencaster Logo">
-            <a href="/">
+        <a href="/" class="site-title">
+            <div class="logo-container">
+                <img :src="logo_src" alt="Gencaster Logo">
+            </div>
+            <p class="site-title-name">
                 Gencaster
-            </a>
-        </div>
+            </p>
+        </a>
         <nav role="navigation">
             <div id="menuToggle">
                 <!--
@@ -103,17 +105,31 @@ function toggleOpen(ev) {
     display: flex;
     gap: 0.5ch;
     align-items: center;
-    margin-top: -5px;
+    margin-top: -7px;
 
     img {
         height: 36px;
         width: 36px;
     }
 
-    a {
-        text-decoration: none;
+}
+
+
+.site-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    
+    p.site-title-name {
+        position: relative;
+        top: -2px;
+        margin-bottom: 0;
     }
 }
+
 
 nav a {
     text-decoration: none;
