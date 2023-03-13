@@ -21,10 +21,11 @@ const { data: news } = await useAsyncData("news", () => {
         @include gap;
 
         display: grid;
-        grid-template-columns: 5fr 5fr 2fr;
+        grid-template-columns: 1fr;
         justify-content: space-between;
-
+        
         @include onScreen('tablet-portrait-up') {
+            grid-template-columns: 5fr 5fr 2fr;
             flex-direction: row;
         }
     }

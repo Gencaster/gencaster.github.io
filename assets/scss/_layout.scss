@@ -22,14 +22,14 @@ body {
 }
 
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     @include onScreen('tablet-portrait-up') {
-        margin-bottom: 2.5rem;
+        margin-bottom: 5.5rem;
     }
 
     @include onScreen('macbook-up') {
-        margin-bottom: 3.5rem;
+        margin-bottom: 7.5rem;
     }
 }
 

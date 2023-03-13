@@ -6,8 +6,8 @@
 </script>
 
 <template>
-    <SectionHeading :heading="heading"></SectionHeading>
     <section>
+        <SectionHeading :heading="heading"></SectionHeading>
         <SupportItem v-for="tile in tiles" :tile="tile"></SupportItem>
     </section>
 </template>
