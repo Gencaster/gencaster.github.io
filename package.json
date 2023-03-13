@@ -8,7 +8,7 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "deploy": "nuxt generate && gh-pages -d dist"
+    "deploy": "nuxt generate && gh-pages -d .output/public"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.3",
