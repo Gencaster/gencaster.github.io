@@ -155,8 +155,13 @@ ul {
     li {
         @include onScreen('tablet-landscape-up') {
             @include margin-h(1ch);
+            
+            &:last-of-type {
+                margin-right: 0;
+            }
         }
     }
+
 }
 
 input, .hamburger {
