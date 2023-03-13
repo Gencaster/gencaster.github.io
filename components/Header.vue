@@ -84,6 +84,7 @@ function toggleOpen(ev) {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    z-index: 1;
 
     @include onScreen('tablet-portrait-up') {
         @include padding-h($bodyPaddingM_H);
