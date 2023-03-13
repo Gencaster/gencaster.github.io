@@ -11,3 +11,10 @@ const { data: imprint } = await useAsyncData("imprint", () => {
         </ContentRenderer>
     </main>
 </template>
+
+<style lang="scss" scoped>
+    main {
+        padding-top: 20vh;
+        padding-bottom: 35vh;
+    }
+</style>

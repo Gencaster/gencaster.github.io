@@ -4,6 +4,9 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    box-sizing: border-box;
+
     @include padding-h($bodyPadding_H);
     @include padding-v($bodyPadding_V);
     
