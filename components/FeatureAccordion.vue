@@ -38,7 +38,7 @@
             margin-bottom: 3rem;
         }
         
-        @include onScreen('macbook-up') {
+        @include onScreen('tablet-landscape-up') {
             margin-top: 2.5rem;
             margin-bottom: 5rem;
         }

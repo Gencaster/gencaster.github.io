@@ -15,6 +15,19 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+section {
+    margin-top: 2rem;
+    
+    @include onScreen('tablet-portrait-up') {
+        margin-top: 3rem;
+    }
+    
+    @include onScreen('tablet-landscape-up') {
+        margin-top: 5rem;
+    }
+}
+
+
 div {
     @include gap;
 

@@ -20,9 +20,9 @@ const { data: support } = await useAsyncData("support", () => {
 
 <template>
     <main>
-        <SectionNav :sections="sections"></SectionNav>
-        <TwoColumnText :heading="about.heading" :text="about" />
-        <ColoredBgText :heading="techstack.heading" :content="techstack" :color="techstack.color"/>
+        <!-- <SectionNav :sections="sections"></SectionNav> -->
+        <PlainText :heading="about.heading" :text="about" />
+        <PlainText :heading="techstack.heading" :text="techstack" />
         <TeamTiles heading="Team" :tiles="team"></TeamTiles>
         <SupportContainer heading="Support" :tiles="support"></SupportContainer>
     </main>
