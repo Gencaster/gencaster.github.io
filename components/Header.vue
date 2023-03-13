@@ -177,6 +177,11 @@ input, .hamburger {
         }
 
         .hamburger {
+            @include padding-v(1rem);
+            @include padding-h(1rem);
+            @include margin-v(-1rem);
+            @include margin-h(-1rem);
+
             display: block;
             border: 0;
             background-color: transparent;
@@ -216,9 +221,9 @@ input, .hamburger {
         position: absolute;
         top: -$bodyPadding_V;
         right: -$bodyPadding_H;
-        width: 33vw;
+        width: 100vw;
         height: 100vh;
-        align-items: end;
+        align-items: center;
         justify-content: center;
         box-sizing: border-box;
 
@@ -231,10 +236,6 @@ input, .hamburger {
         transform: translate(105%, 0);
 
         transition: transform $burgerTransition;
-
-        @include onScreen('iphone-phone-only') {
-            width: 50vw;
-        }
 
         @include onScreen('tablet-portrait-up') {
             @include padding-h($bodyPaddingM_H);
