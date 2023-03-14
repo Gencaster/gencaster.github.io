@@ -40,7 +40,7 @@ function formatDate(date_string) {
 </template>
 
 <style lang="scss">
-@import '~/assets/main.scss';
+@import '~/assets/scss/main.scss';
 
 .news-single {
     .content-container {
