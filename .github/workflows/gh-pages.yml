@@ -2,7 +2,7 @@ name: "Deployment"
 # the event that will trigger the action
 on:
   push:
-    branches: [ main ]
+    branches: [ v3 ]
 
 # what the action will do
 jobs:
