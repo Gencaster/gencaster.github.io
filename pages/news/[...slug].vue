@@ -29,7 +29,7 @@ function formatDate(date_string) {
 
 <template>
   <main class="news-single">
-    <div class="content-container">
+    <div v-if="article.title" class="content-container">
       <h1>{{ article.title }}</h1>
       <p>
         <time datetime="{article.date}">{{ formatDate(article.date) }}</time>

@@ -6,9 +6,11 @@ const { data: news } = await useAsyncData('news', () => {
 
 <template>
   <section>
-    <SectionHeading heading="News" />
-    <div class="news-archive-container">
-      <NewsArchiveTile v-for="article in news" :article="article" />
+    <div v-if="news">
+      <SectionHeading heading="News" />
+      <div class="news-archive-container">
+        <NewsArchiveTile v-for="article in news" :article="article" />
+      </div>
     </div>
   </section>
 </template>
@@ -18,40 +20,40 @@ const { data: news } = await useAsyncData('news', () => {
 @import "assets/scss/mixins.scss";
 
 .news-archive-container {
-        @include gap;
+  @include gap;
 
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
-        @include onScreen('tablet-portrait-up') {
-            grid-template-columns: repeat(2, 1fr);
-        }
+  @include onScreen('tablet-portrait-up') {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        @include onScreen('tablet-landscape-up') {
-            grid-template-columns: repeat(3, 1fr);
-        }
+  @include onScreen('tablet-landscape-up') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.more-link {
+  @include fontStyle('largeBodyText');
+
+  background: $grey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include onScreen('tablet-portrait-up') {
+    width: $twoColumns;
+  }
+
+  a {
+    @include padding-v(1.5em);
+    @include padding-h(5ch);
+
+    @include onScreen('tablet-portrait-up') {
+      @include padding-h(2ch);
     }
-
-    .more-link {
-        @include fontStyle('largeBodyText');
-
-        background: $grey;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include onScreen('tablet-portrait-up') {
-            width: $twoColumns;
-        }
-
-        a {
-            @include padding-v(1.5em);
-            @include padding-h(5ch);
-
-            @include onScreen('tablet-portrait-up') {
-                @include padding-h(2ch);
-            }
-        }
-    }
+  }
+}
 </style>
