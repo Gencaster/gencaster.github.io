@@ -27,10 +27,9 @@ jobs:
         run: yarn
       - name: "Build"
         run: yarn generate
-      - name: "Github Pages Deployment"
+      - name: Deploy with gh-pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn deploy -u "github-actions-bot <support+actions@github.com>"
-        if: ${{ github.ref == 'refs/heads/master' }} # only deploy master
+          npx gh-pages -d ".output/public" -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
