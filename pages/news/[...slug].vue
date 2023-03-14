@@ -40,6 +40,8 @@ function formatDate(date_string) {
 </template>
 
 <style lang="scss">
+@import "@/assets/mixins.scss";
+
 .news-single {
     .content-container {
         width: 100%;
