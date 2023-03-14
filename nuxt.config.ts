@@ -39,7 +39,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  rootDir: 'gencaster.github.io',
 	modules: ["@nuxt/content"],
   css: ['@/assets/scss/main.scss'],
   vite: {
