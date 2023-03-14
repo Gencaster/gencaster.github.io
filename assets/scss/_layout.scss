@@ -1,0 +1,46 @@
+/* ============ Layout ============ */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    @include padding-h($bodyPadding_H);
+    @include padding-v($bodyPadding_V);
+    
+    @include onScreen('tablet-portrait-up') {
+        @include padding-h($bodyPaddingM_H);
+        @include padding-v($bodyPaddingM_V);
+    }
+    
+    @include onScreen('macbook-up') {
+        @include padding-h($bodyPaddingL_H);
+        @include padding-v($bodyPaddingL_V);
+    }
+}
+
+section {
+    margin-bottom: 4rem;
+
+    @include onScreen('tablet-portrait-up') {
+        margin-bottom: 5.5rem;
+    }
+
+    @include onScreen('macbook-up') {
+        margin-bottom: 7.5rem;
+    }
+}
+
+main {
+    padding-top: 4rem;
+    
+    @include onScreen('tablet-portrait-up') {
+        padding-top: 4rem;
+    }
+    
+    @include onScreen('macbook-up') {
+        padding-top: 6rem;
+    }
+}

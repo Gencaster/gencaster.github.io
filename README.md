@@ -1,26 +1,42 @@
-# GenCaster website
+# Nuxt 3 Minimal Starter
 
-The source code for our static website for which we use [Jekyll](https://jekyllrb.com/).
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-There is a CI step which builds the website and serves it via [GitHub Pages](https://pages.github.com/).
+## Setup
 
-## Development
+Make sure to install the dependencies:
 
-* [Install jekyll](https://jekyllrb.com/docs/installation/macos/) - installation will take some time
-* Clone this repo and set up the ruby dependencies via
+```bash
+# yarn
+yarn install
 
-  ```shell
-  bundle
-  ```
-  
-* Start a hot-reload server via 
-  
-  ```shell
-  bundle exec jekyll serve --livereload
-  ```
+# npm
+npm install
 
+# pnpm
+pnpm install
+```
 
-## Customization
+## Development Server
 
-### Styling
-Is done in `initialize.scss`, `_base.scss` and `_layout.scss`.
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
