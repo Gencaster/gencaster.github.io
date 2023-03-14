@@ -18,30 +18,28 @@ const { data: news} = await useAsyncData("news", ({params}) => {
 const { path } = useRoute()
 
 const { data: article } = await useAsyncData(`content-${path}`, () => {
-    return queryContent().where({ _path: path }).findOne()
+  return queryContent().where({ _path: path }).findOne()
 })
 
 function formatDate(date_string) {
-    const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    return new Date(date_string).toLocaleDateString("en-US", options);
+  const options = { month: 'short', day: 'numeric', year: 'numeric' }
+  return new Date(date_string).toLocaleDateString('en-US', options)
 }
 </script>
 
 <template>
-    <main class="news-single">
-        <div class="content-container">
-            <h1>{{ article.title }}</h1>
-            <p>
-                <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
-            </p>
-            <ContentDoc />
-        </div>
-    </main>
+  <main class="news-single">
+    <div class="content-container">
+      <h1>{{ article.title }}</h1>
+      <p>
+        <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
+      </p>
+      <ContentDoc />
+    </div>
+  </main>
 </template>
 
 <style lang="scss">
-@import '~/assets/scss/main.scss';
-
 .news-single {
     .content-container {
         width: 100%;
@@ -86,5 +84,3 @@ function formatDate(date_string) {
     }
 }
 </style>
-
-

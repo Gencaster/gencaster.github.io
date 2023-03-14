@@ -1,22 +1,20 @@
 <script setup>
-    const props = defineProps({
-        sections: Array
-    })
+const props = defineProps({
+  sections: Array,
+})
 </script>
 
 <template>
-    <div>
-        <ul>
-            <li v-for="section in sections">
-                <a :href="'#' + section.toLowerCase()">{{ section }}</a>
-            </li>
-        </ul>
-    </div>
+  <div>
+    <ul>
+      <li v-for="section in sections">
+        <a :href="`#${section.toLowerCase()}`">{{ section }}</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
-
 div {
     @include padding-v(1.5em);
 }

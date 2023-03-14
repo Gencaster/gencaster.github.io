@@ -1,22 +1,20 @@
 <script setup>
 const props = defineProps({
-    heading: String,
-    text: Object,
+  heading: String,
+  text: Object,
 })
 </script>
 
 <template>
-    <section>
-        <SectionHeading v-if="heading" :heading="heading"></SectionHeading>
-        <ContentRenderer :value="text" tag="div">
-            <ContentRendererMarkdown :value="text"/>
-        </ContentRenderer>
-    </section>
+  <section>
+    <SectionHeading v-if="heading" :heading="heading" />
+    <ContentRenderer :value="text" tag="div">
+      <ContentRendererMarkdown :value="text" />
+    </ContentRenderer>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
-
 div {
     width: 100%;
 

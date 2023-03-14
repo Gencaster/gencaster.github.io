@@ -1,84 +1,82 @@
 <script setup>
 const props = defineProps({
-    logo_src: String,
+  logo_src: String,
 })
 
 const menu_items = [
-    {
-        name: "Contact",
-        href: "mailto:contact@gencaster.org",
-        external: false
-    },
-    {
-        name: "Github",
-        href: "https://github.com/GenCaster/gencaster.github.io",
-        external: true
-    },
-    {
-        name: "About",
-        href: "/about/",
-        external: false
-    },
-    {
-        name: "News",
-        href: "/news/",
-        external: false
-    },
+  {
+    name: 'Contact',
+    href: 'mailto:contact@gencaster.org',
+    external: false,
+  },
+  {
+    name: 'Github',
+    href: 'https://github.com/GenCaster/gencaster.github.io',
+    external: true,
+  },
+  {
+    name: 'About',
+    href: '/about/',
+    external: false,
+  },
+  {
+    name: 'News',
+    href: '/news/',
+    external: false,
+  },
 ]
 
-let isOpen = false;
+const isOpen = false
 function toggleOpen(ev) {
-    // somehow the :class binding doesn't work ¯\_(ツ)_/¯
-    // isOpen = !isOpen;
-    ev.target.classList.toggle('open');
+  // somehow the :class binding doesn't work ¯\_(ツ)_/¯
+  // isOpen = !isOpen;
+  ev.target.classList.toggle('open')
 }
 </script>
 
-
 <template>
-    <div class="header-container">
-        <a href="/" class="site-title">
-            <div class="logo-container">
-                <img :src="logo_src" alt="Gencaster Logo">
-            </div>
-            <p class="site-title-name">
-                Gencaster
-            </p>
-        </a>
-        <nav role="navigation">
-            <div id="menuToggle">
-                <!--
+  <div class="header-container">
+    <a href="/" class="site-title">
+      <div class="logo-container">
+        <img :src="logo_src" alt="Gencaster Logo">
+      </div>
+      <p class="site-title-name">
+        Gencaster
+      </p>
+    </a>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <!--
                     A fake / hidden checkbox is used as click reciever,
                     so you can use the :checked selector on it.
                     -->
-                <input type="checkbox" />
+        <input type="checkbox">
 
-                <button @click="toggleOpen" id="hamburger" class="hamburger" :class="{ open: isOpen }">
-                    <span class="line" :class="{ open: isOpen }"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
+        <button id="hamburger" class="hamburger" :class="{ open: isOpen }" @click="toggleOpen">
+          <span class="line" :class="{ open: isOpen }" />
+          <span class="line" />
+          <span class="line" />
+        </button>
 
-                <h1 v-if="isOpen">TEST v-if binding</h1>
+        <h1 v-if="isOpen">
+          TEST v-if binding
+        </h1>
 
-                <ul id="menu">
-                    <li v-for="item in menu_items">
-                        <a :href="item.href" :target="item.external ? '_blank' : '_self'">{{ item.name }}</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+        <ul id="menu">
+          <li v-for="item in menu_items">
+            <a :href="item.href" :target="item.external ? '_blank' : '_self'">{{ item.name }}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/main.scss';
-
 .header-container {
     @include fontStyle('largeBodyText');
     @include padding-h($bodyPadding_H);
     @include padding-v($bodyPadding_V);
-
 
     width: 100%;
     position: fixed;
@@ -116,7 +114,6 @@ function toggleOpen(ev) {
 
 }
 
-
 .site-title {
     display: flex;
     flex-flow: row nowrap;
@@ -124,14 +121,13 @@ function toggleOpen(ev) {
     align-items: center;
     gap: 7px;
     text-decoration: none;
-    
+
     p.site-title-name {
         position: relative;
         top: -2px;
         margin-bottom: 0;
     }
 }
-
 
 nav a {
     text-decoration: none;
@@ -157,7 +153,7 @@ ul {
     li {
         @include onScreen('tablet-landscape-up') {
             @include margin-h(1ch);
-            
+
             &:last-of-type {
                 margin-right: 0;
             }
@@ -273,7 +269,7 @@ input, .hamburger {
         }
     }
 
-    #menuToggle input:checked~ul, 
+    #menuToggle input:checked~ul,
     .hamburger.open~#menu {
         transform: none;
     }

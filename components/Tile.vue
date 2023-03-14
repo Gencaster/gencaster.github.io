@@ -1,26 +1,28 @@
 <script setup>
-    const props = defineProps({
-        tile: Object,
-    })
+const props = defineProps({
+  tile: Object,
+})
 </script>
 
 <template>
-    <div class="tile">
-        <div v-if="tile.img" class="img-container">
-            <img :src="tile.img.src" :alt="tile.img.alt">
-        </div>
-        <h4 v-if="tile.heading">{{ tile.heading }}</h4>
-        <p v-if="tile.role" class="role">{{ tile.role }}</p>
-        <ContentRenderer :value="tile" tag="div">
-            <ContentRendererMarkdown :value="tile" class="text-container"/>
-        </ContentRenderer>
+  <div class="tile">
+    <div v-if="tile.img" class="img-container">
+      <img :src="tile.img.src" :alt="tile.img.alt">
     </div>
+    <h4 v-if="tile.heading">
+      {{ tile.heading }}
+    </h4>
+    <p v-if="tile.role" class="role">
+      {{ tile.role }}
+    </p>
+    <ContentRenderer :value="tile" tag="div">
+      <ContentRendererMarkdown :value="tile" class="text-container" />
+    </ContentRenderer>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-    @import '~/assets/scss/main.scss';
-
-    .tile {
+.tile {
         width: 100%;
         display: flex;
         flex-flow: column nowrap;

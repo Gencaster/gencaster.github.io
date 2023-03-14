@@ -1,25 +1,23 @@
 <script setup>
 const props = defineProps({
-    article: Object,
-    width: String,
+  article: Object,
+  width: String,
 })
 </script>
 
 <template>
-    <a :href="article._path" class="container" :class="width">
-        <div class="img-container">
-            <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
-        </div>
-        <h4>
-            {{article.title}}
-        </h4>
-    </a>
+  <a :href="article._path" class="container" :class="width">
+    <div class="img-container">
+      <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
+    </div>
+    <h4>
+      {{ article.title }}
+    </h4>
+  </a>
 </template>
 
 <style lang="scss" scoped>
-    @import '~/assets/scss/main.scss';
-
-    a.container {
+a.container {
         display: flex;
         flex-flow: column nowrap;
         background: $grey;

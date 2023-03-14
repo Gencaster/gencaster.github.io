@@ -1,21 +1,18 @@
 <script setup>
-    const props = defineProps({
-        text: String,
-    })
+const props = defineProps({
+  text: String,
+})
 </script>
 
-
 <template>
-    <section class="hero">
-        <p>
-            {{text}}
-        </p>
-    </section>
+  <section class="hero">
+    <p>
+      {{ text }}
+    </p>
+  </section>
 </template>
 
 <style lang='scss' scoped>
-@import '~/assets/scss/main.scss';
-
 .hero {
     @include padding-h(15px);
     @include padding-v(20px);
@@ -26,12 +23,12 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 0; // overwrite general layout
-    
+
     @include onScreen('tablet-landscape-up') {
         @include padding-h(12%);
         @include padding-v(9%);
     }
-    
+
     p {
         @include fontStyle('headlineLarger');
 

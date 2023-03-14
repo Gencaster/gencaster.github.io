@@ -1,15 +1,13 @@
 <template>
-    <footer>
-        <span></span>
-        <p>2022 – 2023</p>
-        <a href="/imprint">Imprint</a>
-    </footer>
+  <footer>
+    <span />
+    <p>2022 – 2023</p>
+    <a href="/imprint">Imprint</a>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
-    @import '~/assets/scss/main.scss';
-
-    footer {
+footer {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);

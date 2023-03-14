@@ -1,22 +1,20 @@
 <script setup>
-const { data: news } = await useAsyncData("news", () => {
-    return queryContent("news").sort({ date: 1 }).find();
-});
+const { data: news } = await useAsyncData('news', () => {
+  return queryContent('news').sort({ date: 1 }).find()
+})
 </script>
 
 <template>
-    <section>
-        <SectionHeading heading="News"></SectionHeading>
-        <div class="news-archive-container">
-            <NewsArchiveTile v-for="article in news" :article="article"></NewsArchiveTile>
-        </div>
-    </section>
+  <section>
+    <SectionHeading heading="News" />
+    <div class="news-archive-container">
+      <NewsArchiveTile v-for="article in news" :article="article" />
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
-    @import '~/assets/scss/main.scss';
-
-    .news-archive-container {
+.news-archive-container {
         @include gap;
 
         display: grid;
@@ -33,21 +31,21 @@ const { data: news } = await useAsyncData("news", () => {
 
     .more-link {
         @include fontStyle('largeBodyText');
-        
+
         background: $grey;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
         @include onScreen('tablet-portrait-up') {
             width: $twoColumns;
         }
-        
+
         a {
             @include padding-v(1.5em);
             @include padding-h(5ch);
-            
+
             @include onScreen('tablet-portrait-up') {
                 @include padding-h(2ch);
             }
