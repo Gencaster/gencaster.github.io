@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     },
   ],
 
-	modules: ["@nuxt/content", '@nuxtjs/style-resources'],
+	modules: ["@nuxt/content"],
   css: ['@/assets/scss/main.scss'],
   vite: {
     css: {
