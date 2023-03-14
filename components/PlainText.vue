@@ -17,27 +17,29 @@
 </template>
 
 <style lang="scss" scoped>
-    section {
-        @include margin-h(auto);
-        color: $black;
-        width: 100%;
+@import '~/assets/scss/main.scss';
 
-        @include onScreen('tablet-portrait-up') {    
-            @include padding-v(0);
-            
-            width: $eightColumns;
-        }
+section {
+    @include margin-h(auto);
+    color: $black;
+    width: 100%;
 
-        @include onScreen('tablet-landscape-up') {    
-            @include padding-v(0);
-            
-            width: $sixColumns;
-        }
+    @include onScreen('tablet-portrait-up') {    
+        @include padding-v(0);
+        
+        width: $eightColumns;
+    }
 
-        @include onScreen('macbook-up') {    
-            @include padding-v(0);
-            
-            width: $fiveColumns;
-        }
-    }    
+    @include onScreen('tablet-landscape-up') {    
+        @include padding-v(0);
+        
+        width: $sixColumns;
+    }
+
+    @include onScreen('macbook-up') {    
+        @include padding-v(0);
+        
+        width: $fiveColumns;
+    }
+}    
 </style>
