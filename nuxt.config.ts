@@ -11,6 +11,10 @@ const siteImage = {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  experimental: {
+    payloadExtraction: false,
+  },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -46,7 +50,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-          @use "assets/scss/mixins.scss" as *;
+          @import "assets/scss/variables.scss"; @import "assets/scss/mixins.scss";
           `,
         },
       },
