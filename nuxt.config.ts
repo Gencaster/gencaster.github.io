@@ -39,8 +39,8 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-	modules: ["@nuxt/content"],
-  css: ['~/assets/scss/main.scss'],
+  modules: ['@nuxt/content'],
+  css: ['assets/scss/main.scss'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -52,4 +52,4 @@ export default defineNuxtConfig({
       },
     },
   },
-});
+})
