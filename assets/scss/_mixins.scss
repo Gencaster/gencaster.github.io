@@ -1,4 +1,3 @@
-
 @mixin onScreen($size) {
   @if $size ==hover-device {
     @media (hover: hover) {
