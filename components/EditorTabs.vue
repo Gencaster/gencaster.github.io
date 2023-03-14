@@ -12,7 +12,7 @@ const props = defineProps({
     <SectionHeading heading="Editor" />
     <ContentRenderer :value="text" tag="div">
       <div class="editor-text">
-        <ContentRendererMarkdown :value="text" />
+        <ContentRendererMarkdown v-if="text" :value="text" />
       </div>
     </ContentRenderer>
     <div class="editor-tabs">

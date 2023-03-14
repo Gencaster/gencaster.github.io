@@ -9,7 +9,7 @@ const props = defineProps({
     <div class="img-container">
       <img :src="tile.img_src" :alt="tile.img_alt">
     </div>
-    <div class="text-container">
+    <div v-if="tile" class="text-container">
       {{ tile.text }}
     </div>
   </div>

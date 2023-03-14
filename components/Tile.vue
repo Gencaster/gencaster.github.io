@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="tile">
+  <div v-if="tile" class="tile">
     <div v-if="tile.img" class="img-container">
       <img :src="tile.img.src" :alt="tile.img.alt">
     </div>
