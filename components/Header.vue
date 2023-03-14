@@ -73,6 +73,9 @@ function toggleOpen(ev) {
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 .header-container {
     @include fontStyle('largeBodyText');
     @include padding-h($bodyPadding_H);

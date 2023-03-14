@@ -11,6 +11,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 h2 {
     @include fontStyle('headline');
 

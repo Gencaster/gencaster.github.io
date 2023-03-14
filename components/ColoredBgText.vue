@@ -22,6 +22,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 section {
         @include gap;
         @include borderless;
