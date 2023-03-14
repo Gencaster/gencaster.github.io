@@ -16,6 +16,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 .support-tile {
 
     @include padding-v(1.5em);

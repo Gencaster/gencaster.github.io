@@ -13,6 +13,9 @@ const props = defineProps({
 </template>
 
 <style lang='scss' scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 .hero {
     @include padding-h(15px);
     @include padding-v(20px);

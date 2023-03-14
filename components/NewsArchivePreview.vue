@@ -17,6 +17,9 @@ const { data: news } = await useAsyncData('news', () => {
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 .news-archive-container {
         @include gap;
 

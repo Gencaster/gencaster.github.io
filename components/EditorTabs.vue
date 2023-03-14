@@ -28,6 +28,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 .editor-text {
         width: 100%;
         margin-bottom: 3rem;

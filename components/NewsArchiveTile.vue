@@ -17,6 +17,9 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import "assets/scss/variables.scss";
+@import "assets/scss/mixins.scss";
+
 a.container {
         display: flex;
         flex-flow: column nowrap;

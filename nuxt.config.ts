@@ -11,6 +11,10 @@ const siteImage = {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  // experimental: {
+  //   payloadExtraction: false,
+  // },
+
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -33,12 +37,8 @@ export default defineNuxtConfig({
       ],
     },
   },
-  components: [
-    {
-      path: '~/components', // will get any components nested in let's say /components/test too
-      pathPrefix: false,
-    },
-  ],
+  components: true,
+
   modules: ['@nuxt/content'],
   css: ['assets/scss/main.scss'],
   vite: {
@@ -46,7 +46,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-          @import "assets/scss/variables.scss"; @import "assets/scss/_mixins.scss";
+          @import "assets/scss/variables.scss"; @import "assets/scss/mixins.scss";
           `,
         },
       },
