@@ -16,6 +16,8 @@
 </template>
 
 <style lang="scss" scoped>
+    @import '~/assets/scss/main.scss';
+
     section {
         @include margin-h(auto);
 

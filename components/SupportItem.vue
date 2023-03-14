@@ -17,6 +17,8 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .support-tile {
+    @import '~/assets/scss/main.scss';
+
     @include padding-v(1.5em);
     @include borderless;
     @include gap;

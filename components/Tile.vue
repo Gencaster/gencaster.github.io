@@ -18,6 +18,8 @@
 </template>
 
 <style lang="scss" scoped>
+    @import '~/assets/scss/main.scss';
+
     .tile {
         width: 100%;
         display: flex;

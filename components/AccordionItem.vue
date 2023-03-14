@@ -28,6 +28,8 @@ const isOpen = ref(false)
 </template>
 
 <style lang="scss">
+@import '~/assets/scss/main.scss';
+
 .accordion {
     width: 100%;
     border-bottom: 1px solid $blue;

@@ -7,6 +7,8 @@
 </template>
 
 <style lang="scss" scoped>
+    @import '~/assets/scss/main.scss';
+
     footer {
         width: 100%;
         display: grid;

@@ -14,6 +14,8 @@
 </template>
 
 <style lang='scss' scoped>
+@import '~/assets/scss/main.scss';
+
 .hero {
     @include padding-h(15px);
     @include padding-v(20px);

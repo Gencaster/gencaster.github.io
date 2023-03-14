@@ -15,6 +15,8 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@import '~/assets/scss/main.scss';
+
 div {
     width: 100%;
 
