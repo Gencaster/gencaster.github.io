@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
+      with:
+        lfs: true
     
     - uses: actions/setup-node@v3
       with:
@@ -35,6 +37,7 @@ jobs:
 
 
   deploy:
+    needs: build 
     name: deploy-website
     if: success() && github.ref == 'refs/heads/main' # only deploy main
     runs-on: ubuntu-22.04
