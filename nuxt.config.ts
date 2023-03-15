@@ -11,9 +11,7 @@ const siteImage = {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // experimental: {
-  //   payloadExtraction: false,
-  // },
+  ssr: false,
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
