@@ -11,7 +11,7 @@ jobs:
     name: build-website
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - uses: actions/setup-node@v3
       with:
@@ -26,7 +26,7 @@ jobs:
     - name: Build the website
       run: npx nuxi generate
     
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       name: Upload build artifacts
       with:
         name: website
