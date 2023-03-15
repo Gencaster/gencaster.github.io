@@ -11,7 +11,10 @@ const siteImage = {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
+  nitro: {
+    preset: 'service-worker',
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
