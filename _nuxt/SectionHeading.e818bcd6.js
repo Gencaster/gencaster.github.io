@@ -1,1 +1,0 @@
-/* empty css                           */import{p as t,o,q as a,a2 as n}from"./entry.30190569.js";const s=["id"],_={__name:"SectionHeading",props:{heading:String},setup(e){return(c,i)=>(o(),a("h2",{id:e.heading.toLowerCase()},n(e.heading),9,s))}},p=t(_,[["__scopeId","data-v-72f9a4bd"]]);export{p as _};
