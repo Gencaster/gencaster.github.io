@@ -4,7 +4,6 @@ const { path } = useRoute()
 const { data: article } = await useAsyncData(`content-${path}`, () => {
   return queryContent().where({ _path: path }).findOne()
 })
-
 function formatDate(date_string) {
   const options = { month: 'short', day: 'numeric', year: 'numeric' }
   return new Date(date_string).toLocaleDateString('en-US', options)

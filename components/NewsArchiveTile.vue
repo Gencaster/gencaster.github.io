@@ -6,14 +6,14 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="article._path" class="container" :class="width">
+  <NuxtLink :to="article._path" class="container" :class="width">
     <div class="img-container">
       <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
     </div>
     <h4>
       {{ article.title }}
     </h4>
-  </a>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
