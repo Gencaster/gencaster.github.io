@@ -8,7 +8,9 @@ const props = defineProps({
   <div>
     <ul>
       <li v-for="section in sections">
-        <a :href="`#${section.toLowerCase()}`">{{ section }}</a>
+        <NuxtLink :to="`#${section.toLowerCase()}`">
+          {{ section }}
+        </NuxtLink>
       </li>
     </ul>
   </div>

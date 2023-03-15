@@ -2,7 +2,9 @@
   <footer>
     <span />
     <p>2022 – 2023</p>
-    <a href="/imprint">Imprint</a>
+    <NuxtLink href="/imprint">
+      Imprint
+    </NuxtLink>
   </footer>
 </template>
 

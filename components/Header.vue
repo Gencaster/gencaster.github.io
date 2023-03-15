@@ -5,6 +5,16 @@ const props = defineProps({
 
 const menu_items = [
   {
+    name: 'News',
+    href: '/news',
+    external: false,
+  },
+  {
+    name: 'About',
+    href: '/about',
+    external: false,
+  },
+  {
     name: 'Contact',
     href: 'mailto:contact@gencaster.org',
     external: false,
@@ -13,16 +23,6 @@ const menu_items = [
     name: 'Github',
     href: 'https://github.com/GenCaster/gencaster.github.io',
     external: true,
-  },
-  {
-    name: 'About',
-    href: '/about/',
-    external: false,
-  },
-  {
-    name: 'News',
-    href: '/news/',
-    external: false,
   },
 ]
 
@@ -36,14 +36,14 @@ function toggleOpen(ev) {
 
 <template>
   <div class="header-container">
-    <a href="/" class="site-title">
+    <NuxtLink to="/" class="site-title">
       <div class="logo-container">
         <img :src="logo_src" alt="Gencaster Logo">
       </div>
       <p class="site-title-name">
         Gencaster
       </p>
-    </a>
+    </NuxtLink>
     <nav role="navigation">
       <div id="menuToggle">
         <!--
@@ -63,8 +63,11 @@ function toggleOpen(ev) {
         </h1>
 
         <ul id="menu">
-          <li v-for="item in menu_items">
-            <a :href="item.href" :target="item.external ? '_blank' : '_self'">{{ item.name }}</a>
+          <li v-for="(item, index) in menu_items" :key="index">
+            <NuxtLink v-if="!item.external" :to="item.href">
+              {{ item.name }}
+            </NuxtLink>
+            <a v-else :href="item.href" target="_blank">{{ item.name }}</a>
           </li>
         </ul>
       </div>
