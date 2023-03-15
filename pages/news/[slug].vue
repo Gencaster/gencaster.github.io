@@ -1,19 +1,3 @@
-<!-- <template>
-    <h1>{{ slug }}</h1>
-    <template>
-      <main>
-        <ContentDoc />
-      </main>
-    </template>
-</template>
-
-<script setup>
-const { data: news} = await useAsyncData("news", ({params}) => {
-    const slug = params.slug;
-    return slug;
-})
-</script> -->
-
 <script setup>
 const { path } = useRoute()
 
@@ -30,10 +14,9 @@ function formatDate(date_string) {
 <template>
   <main class="news-single">
     <div v-if="article" class="content-container">
-      <!-- <h1>{{ article.title }}</h1> -->
-      <h1>TestTitle</h1>
+      <h1>{{ article.title }}</h1>
       <p>
-        <!-- <time datetime="{article.date}">{{ formatDate(article.date) }}</time> -->
+        <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
       </p>
       <ContentDoc />
     </div>
