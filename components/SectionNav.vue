@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   sections: Array,
 })
 </script>
@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
   <div>
     <ul>
-      <li v-for="section in sections">
+      <li v-for="(section, index) in sections" :key="index">
         <NuxtLink :to="`#${section.toLowerCase()}`">
           {{ section }}
         </NuxtLink>

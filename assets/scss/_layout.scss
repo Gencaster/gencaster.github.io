@@ -35,6 +35,7 @@ section {
 
 main {
     padding-top: 4rem;
+    min-height: 100vh;
     
     @include onScreen('tablet-portrait-up') {
         padding-top: 4rem;

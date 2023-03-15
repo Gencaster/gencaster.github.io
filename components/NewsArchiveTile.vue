@@ -1,12 +1,11 @@
 <script setup>
-const props = defineProps({
+defineProps({
   article: Object,
-  width: String,
 })
 </script>
 
 <template>
-  <NuxtLink :to="article._path" class="container" :class="width">
+  <NuxtLink :to="article._path" class="container">
     <div class="img-container">
       <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
     </div>

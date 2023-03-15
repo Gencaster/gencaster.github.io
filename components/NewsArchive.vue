@@ -2,14 +2,38 @@
 const { data: news } = await useAsyncData('news', () => {
   return queryContent('news').sort({ date: 1 }).find()
 })
+
+const filter = ref('')
+const activeTagIndex = ref(-1)
+
+const tags = ['All', 'Demo', 'Presentation']
+
+function applyFilter(ev, index) {
+  activeTagIndex.value = index
+  filter.value = ev.target.dataset.tag
+}
+
+const filteredNews = computed(() => {
+  if (filter.value === '' || filter.value === 'All')
+    return news.value
+  else
+    return news.value.filter(article => article.tags.includes(filter.value.toLowerCase()))
+})
 </script>
 
 <template>
   <section>
     <div v-if="news">
+      <ul>
+        <li v-for="(tag, index) in tags" :key="index">
+          <button :data-tag="tag" :class="{ active: activeTagIndex === index }" @click="applyFilter($event, index)">
+            {{ tag }}
+          </button>
+        </li>
+      </ul>
       <SectionHeading heading="News" />
       <div class="news-archive-container">
-        <NewsArchiveTile v-for="article in news" :article="article" />
+        <NewsArchiveTile v-for="(article, index) in filteredNews" :key="index" :article="article" counter-ref />
       </div>
     </div>
   </section>
@@ -34,25 +58,48 @@ const { data: news } = await useAsyncData('news', () => {
   }
 }
 
-.more-link {
-  @include fontStyle('largeBodyText');
-
-  background: $grey;
+ul {
+  padding-left: 0;
   width: 100%;
   display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 1rem;
 
   @include onScreen('tablet-portrait-up') {
-    width: $twoColumns;
+    margin-bottom: 1rem;
   }
 
-  a {
-    @include padding-v(1.5em);
-    @include padding-h(5ch);
+  @include onScreen('tablet-landscape-up') {
+    margin-bottom: 1rem;
+  }
 
-    @include onScreen('tablet-portrait-up') {
-      @include padding-h(2ch);
+  li {
+    @include margin-h(1ch);
+
+    text-decoration: none;
+  }
+
+  button {
+    color: $darkGrey;
+    border: 0;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: black;
+    }
+
+    &.active {
+      text-decoration: underline;
     }
   }
 }
