@@ -22,9 +22,6 @@ jobs:
     
     - name: Install dependencies
       run: yarn install --frozen-lockfile
-    
-    - name: Build website
-      run: yarn build
 
     - name: Build the website
       run: npx nuxi generate
