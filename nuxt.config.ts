@@ -35,6 +35,10 @@ export default defineNuxtConfig({
   },
   components: true,
 
+  content: {
+    documentDriven: true,
+  },
+
   modules: ['@nuxt/content'],
   css: ['assets/scss/main.scss'],
   vite: {
