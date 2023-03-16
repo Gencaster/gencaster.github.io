@@ -12,7 +12,6 @@ Images need to be placed in the `/public/img` directory. See `/content/3.news/.b
 Make sure to install the dependencies:
 
 ```bash
-# yarn
 yarn install
 ```
 
