@@ -21,7 +21,7 @@ const { data: support } = await useAsyncData('support', () => {
 <template>
   <main>
     <div v-if="about.heading">
-      <PlainText :heading="about.heading" :text="about" />
+      <PlainText :heading="about.heading" :text="about" margin="small" />
       <PlainText :heading="techstack.heading" :text="techstack" />
       <TeamTiles heading="Team" :tiles="team" />
       <SupportContainer heading="Support" :tiles="support" />

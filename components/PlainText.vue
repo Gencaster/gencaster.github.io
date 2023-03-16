@@ -2,11 +2,12 @@
 defineProps({
   heading: String,
   text: Object,
+  margin: String,
 })
 </script>
 
 <template>
-  <section>
+  <section :class="{ smallmargin: margin === 'small' }">
     <div class="text-container">
       <SectionHeading :heading="heading" />
       <ContentRenderer :value="text" tag="div">
@@ -41,6 +42,10 @@ section {
         @include padding-v(0);
 
         width: $fiveColumns;
+    }
+
+    &.smallmargin {
+      margin-bottom: 2.5rem;
     }
 }
 </style>
