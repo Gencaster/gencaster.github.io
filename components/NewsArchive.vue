@@ -6,7 +6,12 @@ const { data: news } = await useAsyncData('news', () => {
 const filter = ref('')
 const activeTagIndex = ref(-1)
 
-const tags = ['All', 'Demo', 'Presentation']
+const tags = ['All']
+news.value.forEach(article => article.tags.forEach((tag) => {
+  tag = tag.charAt(0).toUpperCase() + tag.slice(1)
+  if (!tags.includes(tag))
+    tags.push(tag)
+}))
 
 function applyFilter(ev, index) {
   activeTagIndex.value = index
