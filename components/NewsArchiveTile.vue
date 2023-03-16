@@ -10,6 +10,7 @@ defineProps({
       <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
     </div>
     <h4>
+      <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
       {{ article.title }}
     </h4>
   </NuxtLink>
@@ -50,6 +51,11 @@ a.container {
 
     h4 {
         @include padding-h(2ch);
-        @include padding-v(0.5em);
+        @include padding-v(0.7em);
+    }
+
+    time {
+      display: block;
+      color: $darkGrey;
     }
 </style>
