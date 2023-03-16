@@ -1,5 +1,5 @@
 <template>
-    <Header logo_src="/logo.svg"/>
-    <NuxtPage/>
-    <Footer/>
+  <Header logo-src="/logo.svg" />
+  <NuxtPage />
+  <Footer />
 </template>
