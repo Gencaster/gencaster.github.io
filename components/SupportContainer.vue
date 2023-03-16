@@ -1,13 +1,13 @@
 <script setup>
-    const props = defineProps({
-        heading: String,
-        tiles: Array,
-    })
+defineProps({
+  heading: String,
+  tiles: Array,
+})
 </script>
 
 <template>
-    <section>
-        <SectionHeading :heading="heading"></SectionHeading>
-        <SupportItem v-for="tile in tiles" :tile="tile"></SupportItem>
-    </section>
+  <section>
+    <SectionHeading :heading="heading" />
+    <SupportItem v-for="(tile, index) in tiles" :key="index" :tile="tile" />
+  </section>
 </template>

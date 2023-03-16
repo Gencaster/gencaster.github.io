@@ -8,7 +8,7 @@ const { data: news } = await useAsyncData('news', () => {
   <section>
     <SectionHeading heading="News" />
     <div class="news-archive-container">
-      <NewsArchiveTile v-for="article in news" :article="article" />
+      <NewsArchiveTile v-for="(article, index) in news" :key="index" :article="article" />
       <div class="more-link">
         <NuxtLink to="/news">
           More

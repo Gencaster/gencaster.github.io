@@ -1,7 +1,7 @@
 <script setup>
 import CollapseTransition from '@ivanv/vue-collapse-transition/src/CollapseTransition.vue'
 
-const props = defineProps({
+defineProps({
   item: Object,
 })
 

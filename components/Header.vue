@@ -1,6 +1,6 @@
 <script setup>
-const props = defineProps({
-  logo_src: String,
+defineProps({
+  logoSrc: String,
 })
 
 const menu_items = [
@@ -38,7 +38,7 @@ function toggleOpen(ev) {
   <div class="header-container">
     <NuxtLink to="/" class="site-title">
       <div class="logo-container">
-        <img :src="logo_src" alt="Gencaster Logo">
+        <img :src="logoSrc" alt="Gencaster Logo">
       </div>
       <p class="site-title-name">
         Gencaster
@@ -47,9 +47,9 @@ function toggleOpen(ev) {
     <nav role="navigation">
       <div id="menuToggle">
         <!--
-                    A fake / hidden checkbox is used as click reciever,
-                    so you can use the :checked selector on it.
-                    -->
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
         <input type="checkbox">
 
         <button id="hamburger" class="hamburger" :class="{ open: isOpen }" @click="toggleOpen">

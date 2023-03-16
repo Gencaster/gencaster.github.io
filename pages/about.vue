@@ -1,5 +1,5 @@
 <script setup>
-const sections = ['Origin', 'Techstack', 'Team', 'Support']
+// const sections = ['Origin', 'Techstack', 'Team', 'Support']
 
 const { data: about } = await useAsyncData('about', () => {
   return queryContent('about').where({ section: 'origin' }).findOne()
@@ -20,7 +20,6 @@ const { data: support } = await useAsyncData('support', () => {
 
 <template>
   <main>
-    <!-- <SectionNav :sections="sections"></SectionNav> -->
     <div v-if="about.heading">
       <PlainText :heading="about.heading" :text="about" />
       <PlainText :heading="techstack.heading" :text="techstack" />

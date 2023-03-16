@@ -9,7 +9,7 @@ const props = defineProps({
   <section>
     <SectionHeading :heading="heading" />
     <div class="accordion-container">
-      <AccordionItem v-for="item in items" :item="item" />
+      <AccordionItem v-for="(item, index) in items" :key="index" :item="item" />
     </div>
   </section>
 </template>

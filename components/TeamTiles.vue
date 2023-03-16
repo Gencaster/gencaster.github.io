@@ -9,7 +9,7 @@ const props = defineProps({
   <section>
     <SectionHeading :heading="heading" />
     <div>
-      <Tile v-for="tile in tiles" :tile="tile" />
+      <Tile v-for="(tile, index) in tiles" :key="index" :tile="tile" />
     </div>
   </section>
 </template>

@@ -1,7 +1,7 @@
 <script setup>
 import { Tab, Tabs } from 'vue3-tabs-component'
 
-const props = defineProps({
+defineProps({
   items: Array,
   text: Object,
 })
@@ -17,7 +17,7 @@ const props = defineProps({
     </ContentRenderer>
     <div class="editor-tabs">
       <Tabs>
-        <Tab v-for="item in items" :name="item.title">
+        <Tab v-for="(item, index) in items" :key="index" :name="item.title">
           <div class="tab-content-container">
             <img :src="item.img.src" :alt="item.img.alt">
           </div>
