@@ -9,10 +9,12 @@ defineProps({
     <div class="img-container">
       <img :src="article.teaser_img.src" :alt="article.teaser_img.alt">
     </div>
-    <h4>
-      <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
-      {{ article.title }}
-    </h4>
+    <div class="title-container">
+      <time :datetime="article.date">{{ formatDate(article.date) }}</time>
+      <h4>
+        {{ article.title }}
+      </h4>
+    </div>
   </NuxtLink>
 </template>
 
@@ -31,8 +33,11 @@ a.container {
 
         &:hover {
             text-decoration: underline;
-        }
 
+            time {
+              color: $black;
+            }
+        }
     }
 
     .img-container {
@@ -49,7 +54,7 @@ a.container {
         }
     }
 
-    h4 {
+    .title-container {
         @include padding-h(2ch);
         @include padding-v(0.7em);
     }

@@ -11,7 +11,7 @@ const { data: article } = await useAsyncData(`content-${path}`, () => {
     <div v-if="article" class="content-container">
       <h1>{{ article.title }}</h1>
       <p>
-        <time datetime="{article.date}">{{ formatDate(article.date) }}</time>
+        <time :datetime="article.date">{{ formatDate(article.date) }}</time>
       </p>
       <ContentDoc />
     </div>
