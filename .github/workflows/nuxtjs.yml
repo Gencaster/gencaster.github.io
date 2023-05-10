@@ -4,52 +4,53 @@ on:
   pull_request:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
     name: build-website
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
-      with:
-        lfs: true
-    
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "18"
-        cache: "yarn"
-        cache-dependency-path: |
-          yarn.lock
-    
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
 
-    - name: Build the website
-      run: npx nuxi generate
-    
-    - uses: actions/upload-artifact@v3
-      name: Upload build artifacts
-      with:
-        name: website
-        path: |
-          .output/public
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: yarn
+          cache-dependency-path: |
+            yarn.lock
 
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - uses: pre-commit/action@v3.0.0
+
+      - name: Build the website
+        run: npx nuxi generate
+
+      - uses: actions/upload-artifact@v3
+        name: Upload build artifacts
+        with:
+          name: website
+          path: |
+            .output/public
 
   deploy:
-    needs: build 
+    needs: build
     name: deploy-website
     if: success() && github.ref == 'refs/heads/main' # only deploy main
     runs-on: ubuntu-22.04
     steps:
-    - name: Download website
-      uses: actions/download-artifact@v3
-      with:
-        name: website
+      - name: Download website
+        uses: actions/download-artifact@v3
+        with:
+          name: website
 
-    - name: Update gh-pages branch
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        cname: gencaster.org
+      - name: Update gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          cname: gencaster.org

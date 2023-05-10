@@ -160,7 +160,7 @@
 
 @mixin gap {
   gap: $spacingS;
-        
+
   @include onScreen('tablet-portrait-up') {
       gap: $spacingM;
   }
@@ -170,12 +170,12 @@
 @mixin borderless {
   @include margin-h(-$bodyPadding_H);
   @include padding-h($bodyPadding_H);
-  
+
   @include onScreen('tablet-portrait-up') {
       @include margin-h(-$bodyPaddingM_H);
       @include padding-h($bodyPaddingM_H);
   }
-  
+
   @include onScreen('macbook-up') {
       @include margin-h(-$bodyPaddingL_H);
       @include padding-h($bodyPaddingL_H);
