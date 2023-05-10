@@ -35,8 +35,6 @@ function toggleMenu() {
 function setMenu(value) {
   isOpen.value = value
 }
-
-
 </script>
 
 <template>
@@ -170,7 +168,6 @@ ul {
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
-
 
     .hamburger {
       @include padding-v(1rem);

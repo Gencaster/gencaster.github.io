@@ -1,6 +1,6 @@
 ---
 title:  Next_generation 9.0 @ ZKM
-subtitle: 
+subtitle:
 teaser_img:
     src: /img/news/zkm-next-generation/landing.jpg  # Put images somewhere in /public/img/
     alt: Next_generation 9.0 @ ZKM

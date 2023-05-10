@@ -1,6 +1,6 @@
 ---
 title:  Interim presentation @ MIZ Babelsberg
-subtitle: 
+subtitle:
 teaser_img:
     src: /img/news/miz-interim/landing.jpg  # Put images somewhere in /public/img/
     alt: Interim presentation @ MIZ Babelsberg
