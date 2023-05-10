@@ -35,8 +35,6 @@ function toggleMenu() {
 function setMenu(value) {
   isOpen.value = value
 }
-
-
 </script>
 
 <template>
@@ -90,6 +88,8 @@ $burgerTransition : 200ms ease-in-out;
   flex-flow: row nowrap;
   justify-content: space-between;
   z-index: 1;
+
+  background-color: white;
 
   @include onScreen('tablet-portrait-up') {
     @include padding-h($bodyPaddingM_H);
@@ -170,7 +170,6 @@ ul {
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
-
 
     .hamburger {
       @include padding-v(1rem);
