@@ -9,6 +9,6 @@ categories: concert
 tags: [concert,demo]
 ---
 
-Dennis Scheiba held a concert where he was sending generative sound layers through the phones of the audience. 
+Dennis Scheiba held a concert where he was sending generative sound layers through the phones of the audience.
 
 ![slide](/img/news/live-coding-gencaster/live-coding-gencaster.jpg)

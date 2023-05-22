@@ -17,4 +17,3 @@ Gencaster recieved the output of the mixer, added additional processing and then
 
 ### Poster shown at the event
 ![slide](/img/news/ambiente-sonoro/ambiente-sonoro-poster.jpg)
-
