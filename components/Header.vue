@@ -89,7 +89,7 @@ $burgerTransition : 200ms ease-in-out;
   justify-content: space-between;
   z-index: 1;
 
-  background-color: white;
+  background-color: $bodyBackground;
 
   @include onScreen('tablet-portrait-up') {
     @include padding-h($bodyPaddingM_H);
