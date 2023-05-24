@@ -20,8 +20,13 @@ const menu_items = [
     external: false,
   },
   {
-    name: 'Github',
-    href: 'https://github.com/GenCaster/gencaster.github.io',
+    name: 'Docs',
+    href: 'https://docs.gencaster.org',
+    external: true,
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/GenCaster/gencaster',
     external: true,
   },
 ]
