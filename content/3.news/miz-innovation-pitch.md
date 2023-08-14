@@ -11,6 +11,8 @@ tags: [presentation]
 
 We were invited at the MIZ to present at their first innovation pitch. A wide range of audio professionals where present to learn and exchange about future audio technology.
 
+Photo Credits: MIZ Babelsberg
+
 Some slides from the presentation:
 
 ![slide](/img/news/miz-innovation-pitch/4.png){:class="border"}
