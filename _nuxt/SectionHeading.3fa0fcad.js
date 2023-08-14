@@ -1,1 +1,0 @@
-import{l as t,o as n,m as _,P as o}from"./entry.c760cc46.js";const a=["id"],c={__name:"SectionHeading",props:{heading:String},setup(e){return(s,i)=>(n(),_("h2",{id:e.heading.toLowerCase()},o(e.heading),9,a))}},r=t(c,[["__scopeId","data-v-eec21eed"]]);export{r as _};
