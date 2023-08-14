@@ -3,10 +3,10 @@ const { data: news } = await useAsyncData('news', () => {
   return queryContent('news').sort({ date: -1 }).find()
 })
 
-const filter = ref('')
-const activeTagIndex = ref(-1)
-
+const filter = ref('All')
+const activeTagIndex = ref(0)
 const tags = ['All']
+
 news.value.forEach(article => article.tags.forEach((tag) => {
   tag = tag.charAt(0).toUpperCase() + tag.slice(1)
   if (!tags.includes(tag))
@@ -24,6 +24,16 @@ const filteredNews = computed(() => {
   else
     return news.value.filter(article => article.tags.includes(filter.value.toLowerCase()))
 })
+
+const updateFilter = (tag) => {
+  // get index of tags array
+  const tagsLowercase = tags.map(tag => tag.toLowerCase())
+  const index = tagsLowercase.indexOf(tag)
+
+  activeTagIndex.value = index
+  filter.value = tag
+  // filter.value = tag
+}
 </script>
 
 <template>
@@ -38,7 +48,10 @@ const filteredNews = computed(() => {
       </ul>
       <SectionHeading heading="News" />
       <div class="news-archive-container">
-        <NewsArchiveTile v-for="(article, index) in filteredNews" :key="index" :article="article" counter-ref />
+        <NewsArchiveTile
+          v-for="(article, index) in filteredNews" :key="index" :article="article" :show-tags="true"
+          counter-ref @clicked-tag="(tag) => updateFilter(tag)"
+        />
       </div>
     </div>
   </section>
