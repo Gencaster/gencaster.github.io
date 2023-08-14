@@ -113,10 +113,6 @@ a.news-wrapper {
   }
 }
 
-.active {
-  background-color: red;
-}
-
 time {
   display: block;
   color: $darkGrey;
