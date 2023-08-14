@@ -1,6 +1,11 @@
 <script setup>
 const { data: news } = await useAsyncData('news', () => {
-  return queryContent('news').sort({ date: -1 }).limit(2).find()
+  return queryContent('news').sort({ date: -1 }).find()
+})
+
+// for some reason, we must compute the data, otherwise the rendering is overwritten by the NewsArchive component request
+const lastTwoNews = computed(() => {
+  return news.value.slice(0, 2)
 })
 </script>
 
@@ -8,7 +13,7 @@ const { data: news } = await useAsyncData('news', () => {
   <section>
     <SectionHeading heading="News" />
     <div class="news-archive-container">
-      <NewsArchiveTile v-for="(article, index) in news" :key="index" :article="article" />
+      <NewsArchiveTile v-for="(article, index) in lastTwoNews" :key="index" :article="article" />
       <div class="more-link">
         <NuxtLink to="/news">
           More
