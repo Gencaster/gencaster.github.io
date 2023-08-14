@@ -46,7 +46,6 @@ const clickedTag = (tag) => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 a.news-wrapper {
@@ -88,6 +87,7 @@ a.news-wrapper {
 }
 
 .category-filters {
+  cursor: pointer;
   @include padding-v(0.7em);
   display: flex;
   gap: 0.7em;
@@ -111,6 +111,10 @@ a.news-wrapper {
       text-decoration: none;
     }
   }
+}
+
+.active {
+  background-color: red;
 }
 
 time {

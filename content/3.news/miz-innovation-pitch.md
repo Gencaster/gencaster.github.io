@@ -2,7 +2,7 @@
 title:  MIZ Innovation Pitch
 subtitle:
 teaser_img:
-    src: /img/news/miz-interim/landing.jpg  # Put images somewhere in /public/img/
+    src: /img/news/miz-innovation-pitch/landing.jpg  # Put images somewhere in /public/img/
     alt: MIZ Innovation Pitch
 date: '2023-06-29'
 categories: presentation

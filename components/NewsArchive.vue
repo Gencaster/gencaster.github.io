@@ -48,10 +48,12 @@ const updateFilter = (tag) => {
       </ul>
       <SectionHeading heading="News" />
       <div class="news-archive-container">
-        <NewsArchiveTile
-          v-for="(article, index) in filteredNews" :key="index" :article="article" :show-tags="true"
-          counter-ref @clicked-tag="(tag) => updateFilter(tag)"
-        />
+        <TransitionGroup name="fade">
+          <NewsArchiveTile
+            v-for="(article, index) in filteredNews" :key="index" :article="article" :show-tags="true"
+            counter-ref @clicked-tag="(tag) => updateFilter(tag)"
+          />
+        </TransitionGroup>
       </div>
     </div>
   </section>
@@ -61,6 +63,16 @@ const updateFilter = (tag) => {
 @import "assets/scss/variables.scss";
 @import "assets/scss/mixins.scss";
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  // transform: translateX(30px);
+}
 .news-archive-container {
   @include gap;
 
