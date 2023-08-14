@@ -4,6 +4,8 @@ const { data: news } = await useAsyncData('news', () => {
 })
 
 // for some reason, we must compute the data, otherwise the rendering is overwritten by the NewsArchive component request
+// this seems to be coming from useAsyncData which seems to cache the request?
+
 const lastTwoNews = computed(() => {
   return news.value.slice(0, 2)
 })
