@@ -9,7 +9,7 @@ categories: presentation
 tags: [presentation,demo]
 ---
 
-We were invited at the MIZ to present our current state of development during the Role Model Session #11. 
+We were invited at the MIZ to present our current state of development during the Role Model Session #11.
 
 Photo Credits: MIZ Babelsberg
 
