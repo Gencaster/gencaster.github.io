@@ -74,10 +74,14 @@ defineProps({
             width: 100%;
             height: auto;
             background: $grey;
+            padding: 10px;
 
             @include onScreen('tablet-portrait-up') {
                 width: auto;
                 height: 50vh;
+
+            padding: $bodyPaddingM_H;
+
             }
 
             img {
