@@ -1,8 +1,8 @@
 ---
-title: Live-coding Gencaster at typotopics
+title: Live-coding Gencaster at typotopics event
 subtitle: Using Gencaster as a musical instrument
 teaser_img:
-    src: /img/news/typotopics/event.jpg
+    src: /img/news/typotopics/poster-small.jpg
     alt: Dennis Scheiba using Gencaster to generate and distribute "radio" signals on-the-fly
 date: '2023-07-01'
 categories: concert
