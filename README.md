@@ -31,3 +31,9 @@ yarn dev
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## License
+
+Any source code of the website is licensed under AGPL-3.0.
+
+Any content, such as text or media, is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
