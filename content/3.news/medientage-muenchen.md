@@ -9,7 +9,7 @@ categories: panel
 tags: [panel]
 ---
 
-On 2023-10-27 Dennis Scheiba, one of the Gencaster developers, was invited by the Media Lab Bayern to the Medientage München 2023 to talk with media coach Erkan Kasap about the innovation tandem between journalism and technology with the title *Journalismus unterstützen mit innovativen Tech-Lösungen*.
+On 2023-10-27 Dennis Scheiba, one of the Gencaster developers, was invited by the Media Lab Bayern to the Medientage München 2023 to talk with media coach Erkan Kasap about the innovation tandem between journalism and technology with the title Supporting journalism with innovative tech solutions (*Journalismus unterstützen mit innovativen Tech-Lösungen*).
 
 Gencaster was used as an example of a medium that enables a new way of communication and how this affects the process of media creation and its impact on society.
 
