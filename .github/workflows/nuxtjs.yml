@@ -28,7 +28,7 @@ jobs:
       - uses: pre-commit/action@v3.0.0
 
       - name: Build the website
-        run: npx nuxi generate
+        run: yarn generate
 
       - uses: actions/upload-artifact@v3
         name: Upload build artifacts
