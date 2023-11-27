@@ -31,6 +31,8 @@ export default defineNuxtConfig({
         { property: 'og:url', content: siteUrl },
         { property: 'og:image', content: siteImage.url, hid: 'og:image' },
         { property: 'theme-color', content: '#FFFFFF' },
+        // google search console
+        { property: 'google-site-verification', content: '5dE39ihRPtzuModjqcgOzLcwneqgXbWz6_kokjM9jrc' },
       ],
     },
   },
