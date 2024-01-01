@@ -30,7 +30,7 @@ jobs:
       - name: Build the website
         run: yarn generate
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         name: Upload build artifacts
         with:
           name: website
