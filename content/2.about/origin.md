@@ -3,7 +3,7 @@ heading: Origin
 section: origin
 ---
 
-Gencaster is the result of our research into augmented audio. It all started in 2017 with the idea of creating a dynamic audio walk that adapts its story every time the listener changes their walking direction (similar to CYOA books).
+Gencaster is the result of our research into augmented audio. It all started in 2017 with the idea of creating a dynamic audio walk that adapts its story every time the listener changes their walking direction (similar to Chose-your-own-adventure books).
 
 In 2019, we finally produced our first proof of concept titled "Social Score - Nothing to Hide." It is a GPS-based audiobook spoken by an artificial voice which negotiates the possible introduction of a social scoring system in Germany. It runs for about 25 minutes and adapts the narrative to the listener and their respective environment in real time. It got nominated for the Online Grimme Award, as well as the Prix Europa (Best European Online Media Project of the Year) and also won the DOK.Digital Award.
 

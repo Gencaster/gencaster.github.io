@@ -1,7 +1,7 @@
 <template>
   <footer>
     <span />
-    <p>2022 – 2023</p>
+    <p>2022 – today</p>
     <NuxtLink href="/imprint">
       Imprint
     </NuxtLink>
