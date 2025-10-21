@@ -34,6 +34,13 @@ export default defineNuxtConfig({
         // google search console
         { name: 'google-site-verification', content: '5dE39ihRPtzuModjqcgOzLcwneqgXbWz6_kokjM9jrc' },
       ],
+      script: [
+        {
+          defer: true,
+          src: 'https://insights.vinzenzaubry.com/utils.js',
+          'data-website-id': 'bc65fc52-b052-4431-9731-9fd06796b529',
+        },
+      ],
     },
   },
   components: true,
