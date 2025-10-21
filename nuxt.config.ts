@@ -36,8 +36,8 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          defer: true,
-          src: 'https://insights.vinzenzaubry.com/utils.js',
+          'defer': true,
+          'src': 'https://insights.vinzenzaubry.com/utils.js',
           'data-website-id': 'bc65fc52-b052-4431-9731-9fd06796b529',
         },
       ],
