@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         {
           'defer': true,
           'src': 'https://insights.vinzenzaubry.com/utils.js',
-          'data-website-id': '109f4804-578f-41a8-8894-464639b72721',
+          'data-website-id': '109f4804-578f-41a8-8894-464639b72720',
         },
       ],
     },
