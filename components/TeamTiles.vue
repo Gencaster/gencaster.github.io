@@ -38,8 +38,6 @@ div {
     width: 100%;
     margin-bottom: $spacingS;
 
-
-
     @include onScreen('tablet-portrait-up') {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: $spacingM;
